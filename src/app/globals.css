@@ -2,14 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
 }
-
 
 body {
     min-height: 100vh;
@@ -23,10 +20,11 @@ body {
 }
 
 /* TECHNOLOGIES */
-.icons-container-div {
+.icons-box-div {
     position: relative;
     height: 20rem;
     width: 40%;
+    overflow: hidden;
     margin-left: 1rem;
     margin-right: 1rem;
     border-radius: 2rem;
@@ -40,6 +38,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     background: rgb(0, 0, 0);
     background: radial-gradient(circle, #052814bb 0%, rgba(0, 0, 0, 1) 30%);
 }
@@ -47,6 +46,12 @@ body {
 .cards-container-div {
     width: 40%;
     height: 20rem;
+    display: flex;
+    align-items: center;
+}
+
+.cards-flex-box {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -56,7 +61,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0rem 0.5rem 0rem 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 .tech-card-div {
@@ -99,5 +104,16 @@ body {
 }
 
 .tech-icon-div:hover {
+    cursor: pointer;
+}
+
+.tech-info-banner-div {
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgb(0, 0, 0, 0.7);
+}
+
+.tech-info-banner-div:hover {
     cursor: pointer;
 }

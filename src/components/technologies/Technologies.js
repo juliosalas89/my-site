@@ -1,5 +1,5 @@
 'use client'
-
+import TechInfoBanner from "./TechInfoBanner"
 import TechCard from "./TechCard"
 import TechIcon from "./TechIcon"
 import { useEffect, useState } from "react"
@@ -49,17 +49,20 @@ const Technologies = () => {
     return (
         <div className="technologies-container">
             <div className="cards-container-div">
-                {technologies.map((technology, index) => (
-                    <TechCard 
-                        techIndex={index}
-                        technology={technology} 
-                        selectedTechIndex={selectedTechIndex}
-                        setSelectedTechIndex={techIndex => setSelectedTechIndex(techIndex)} 
-                        key={index}
-                    />
-                ))}
+                <div className="cards-flex-box">
+                    {technologies.map((technology, index) => (
+                        <TechCard 
+                            techIndex={index}
+                            technology={technology} 
+                            selectedTechIndex={selectedTechIndex}
+                            setSelectedTechIndex={techIndex => setSelectedTechIndex(techIndex)} 
+                            key={index}
+                        />
+                    ))}
+                </div>
             </div>
-            <div id="icons-container" className="icons-container-div">
+            <div id="icons-container" className="icons-box-div">
+                { selectedTechIndex !== null ? <TechInfoBanner unselectTech={() => setSelectedTechIndex(null)}/> : null}
                 {!iconsBoxWidth ? null : icons.map((iconName, index) => (
                     <TechIcon 
                         findAndSelectTech={iconIndex => findAndSelectTech(iconIndex)}

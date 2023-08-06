@@ -12,7 +12,7 @@ const TechIcon = ({iconName, iconsBoxWidth, selectedTech, iconIndex, findAndSele
     // displacement vector length must be equal to 2 so all the icons move at the same speed, therefore we need a trogonometrical composition of x,y
     const [xDisplacement] = useState(Math.random() * 2)
     const [yDisplacement] = useState(2 * (new Decimal(xDisplacement).div(2).acos().sin()))
-    const [selected, setSelected] = useState(false)
+    const [selectedPosition, setSelectedPosition] = useState(null)
     
     useEffect(() => {
         if(selectedTech) return
@@ -22,6 +22,9 @@ const TechIcon = ({iconName, iconsBoxWidth, selectedTech, iconIndex, findAndSele
          }, 100)
     }, [xPosition, yPosition, xDirection, yDirection, selectedTech])
 
+    useEffect(()=> {
+        handleSelection()
+    }, [selectedTech])
 
     const changeDirection = () => {
         if (xPosition < 1 || xPosition > (iconsBoxWidth-64-1)) setXDirection(xDirection * -1)
@@ -38,19 +41,30 @@ const TechIcon = ({iconName, iconsBoxWidth, selectedTech, iconIndex, findAndSele
             setYPosition(yPosition + yDisplacement * yDirection)
     }
 
+    const handleSelection = () => {
+        if (!selectedTech) return
+        console.log("selectedTech",selectedTech)
+        console.log("iconIndex",iconIndex)
+        const position = selectedTech.iconsIndexes.indexOf(iconIndex)
+        setSelectedPosition(position >= 0 ? position : null)
+    }
+
+    const calculateX = ()=> selectedTech && selectedPosition !== null ? 20 + 70*selectedPosition : xPosition
+
+    const calculateY = ()=> !selectedTech ? yPosition : selectedPosition !== null ? 20 : 330
+
     const handleClick = ()=> {
-        findAndSelectTech(selected ? null : iconIndex)
-        setSelected(!selected)
+        findAndSelectTech(iconIndex)
     }
 
     return (
-        <motion.div 
+        <motion.div
             className="tech-icon-div"
-            animate={selected ? 
-                { height: 320, width: iconsBoxWidth, scale:1, borderRadius: '2rem', x: 0, y: 0} : 
-                { x: xPosition, y: yPosition }
+            animate={
+                { x: calculateX(), y: calculateY() }
             }
-            whileHover={selected ? {} : { scale: 1.4, rotate: 360 }}
+            transition={{ duration: 0.4 }}
+            whileHover={{ duration: 0.1, scale: 1.4 }}
             onClick={handleClick}
         >
             <Image src={`/techIcons/${iconName}.png`} alt={`${iconName}-icon`} width="40" height="40" />
