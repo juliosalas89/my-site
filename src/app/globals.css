@@ -18,21 +18,31 @@ body {
         )
         rgb(var(--background-start-rgb));
 }
-
-/* TECHNOLOGIES */
-.icons-box-div {
-    position: relative;
-    height: 20rem;
-    width: 40%;
-    overflow: hidden;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    border-radius: 2rem;
-    background: rgb(127,255,212);
-    background: radial-gradient(circle at left, #45D483 30%, #06B7DB 70%);    
+/* ############### GENERAL #################### */
+.title-mid {
+    font-size: 3rem;
 }
 
+.green-span {
+    color: #45D483;
+}
+.blue-span {
+    color: #06B7DB;
+}
+
+.title-right {
+    text-align: right;
+}
+
+.indent {
+    margin-left: 7rem;
+}
+
+
+/* ############### TECHNOLOGIES #################*/
+
 .technologies-container {
+    min-height: 35rem;
     padding: 1rem;
     width: 100%;
     display: flex;
@@ -43,8 +53,20 @@ body {
     background: radial-gradient(circle, #052814bb 0%, rgba(0, 0, 0, 1) 30%);
 }
 
+.icons-box-div {
+    position: relative;
+    height: 20rem;
+    width: 50%;
+    overflow: hidden;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 2rem;
+    background: rgb(127,255,212);
+    background: radial-gradient(circle at left, #45D483 30%, #06B7DB 70%);    
+}
+
 .cards-container-div {
-    width: 40%;
+    width: 50%;
     height: 20rem;
     display: flex;
     align-items: center;
@@ -69,7 +91,7 @@ body {
     padding: 1rem;
     border: 1px solid rgb(255,255,255, 0.09);
     border-radius: 0.5rem;
-    background: rgb(255,255,255, 0.05);
+    background: rgb(255,255,255, 0.04);
 }
 .tech-card-div:hover {
     cursor: pointer;
@@ -108,12 +130,92 @@ body {
 }
 
 .tech-info-banner-div {
+    border-radius: 50%;
     top: 0;
     left: 0;
     position: absolute;
-    background: rgb(0, 0, 0, 0.7);
+    background: rgb(0, 0, 0, 0.8);
+    padding: 1rem;
+    padding-top: 6rem;
 }
 
 .tech-info-banner-div:hover {
     cursor: pointer;
+}
+
+/* ################# EDUCATION ################# */
+
+.education-main {
+    margin-top: 8rem;
+}
+
+.education-cards-container {
+    position: relative;
+    height: 500px;
+}
+
+.education-column-div {
+    width: 50%;
+}
+
+.education-card-main-left {
+    width: 100%;
+    padding: 1rem 5rem 1rem 1rem;
+}
+
+.education-card-main-right {
+    width: 100%;
+    padding: 1rem 1rem 1rem 5rem;
+}
+
+.education-card-div {
+    width: 100%;
+    padding: 2rem;
+    border: 1px solid rgb(255,255,255, 0.09);
+    border-radius: 0.5rem;
+    background: rgb(255,255,255, 0.04);
+}
+.education-card-div:hover {
+    background: radial-gradient(circle at calc(var(--cursor-x) * 100%) calc(var(--cursor-y) * 100%),  #052814bb 0%, transparent 70%);
+}
+
+.education-card-header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.education-card-header-details {
+    margin-left: 2rem;
+}
+
+.education-card-body {
+    margin-top: 1.5rem;
+}
+
+/* ################## MEDIA RESPONSIVE STYLES ################ */
+
+/* x-large devices */
+@media all and (min-width: 1051px){
+    body {
+       padding: 0rem 10rem 0rem 10rem;
+    }
+}
+/* large devices */
+@media all and (min-width: 992px) and (max-width: 1050px){
+    body {
+       padding: 0rem 6rem 0rem 6rem;
+    }
+}
+/* medium devices*/
+@media all and (min-width: 768px) and (max-width: 991px){
+    body {
+        padding: 0rem 2rem 0rem 2rem;
+    }
+}
+/* mobile devices */
+@media all and (max-width: 767px) {
+    body {
+        padding: 0rem;
+    }
 }
