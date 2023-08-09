@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
+import { urbanist300 } from "@/utils/fonts"
 
-const TechInfoBanner = ({unselectTech, iconsBoxWidth})=> {
+const TechInfoBanner = ({unselectTech, iconsBoxWidth, selectedTech})=> {
     return (
         <motion.div
             className="tech-info-banner-div"
@@ -8,7 +9,7 @@ const TechInfoBanner = ({unselectTech, iconsBoxWidth})=> {
             onClick={unselectTech} 
             transition={{ duration: 0.4 }}
         >
-            <p>Im julio and im a programer</p>
+            <p className={urbanist300.className}>{selectedTech.description}</p>
         </motion.div>
     )
 }

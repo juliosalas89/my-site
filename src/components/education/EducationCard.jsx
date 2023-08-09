@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import Decimal from "decimal.js";
 
 const EducationCard = ({name, index}) => {
     // const [xOffset, setXOffset] = useState(0.01)
@@ -23,12 +24,12 @@ const EducationCard = ({name, index}) => {
     })
     
     const handleCursorMove = () => {
-        const card = document.getElementById(`edcucation-card-div-${name}`)
+        const card = document.getElementById(`offset-catch-div-${name}`)
         const cardValues = card.getBoundingClientRect()
         const root = document.documentElement;
         card.addEventListener('mousemove', event => {
-            root.style.setProperty('--cursor-x', (event.clientX-cardValues.left)/cardValues.width);
-            root.style.setProperty('--cursor-y', (event.clientY-cardValues.top)/cardValues.height);
+            root.style.setProperty('--cursor-x', new Decimal(event.offsetX).div(cardValues.width));
+            root.style.setProperty('--cursor-y', new Decimal(event.offsetY).div(cardValues.height));
         });
     }
 
@@ -38,24 +39,18 @@ const EducationCard = ({name, index}) => {
         //     transition={{ duration: 0.5 }}   
         // animate={{ y: index * 200 }}
         // >
-        <motion.div 
-            className={`education-card-main-${index % 2 === 0 ? 'left' : 'right'}`}   
-        >
-            <motion.div
-                transition={{ duration: 0.3 }}
-                id={`edcucation-card-div-${name}`} 
-                ref={cardRef}
-                className="education-card-div"
-            >
+        <main className={`education-card-main-${index % 2 === 0 ? 'left' : 'right'}`}>
+            <div className="education-card-div">
                 <div className="education-card-header">
-                    <Image src="/techIcons/next.png" alt={`-icon`} width="40" height="40" />
+                    <Image src="/educationIcons/unt.png" alt={`-icon`} width="150" height="40" />
                     <p className="education-card-header-details">holi que onda</p>
                 </div>
                 <div className="education-card-body">
                     <p>this is what i leaned in this place</p>
                 </div>
-            </motion.div>
-        </motion.div>        
+                <div className="offset-catch-div" id={`offset-catch-div-${name}`}/>
+            </div>
+        </main>        
     )
 }
 

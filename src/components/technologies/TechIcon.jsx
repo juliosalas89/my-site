@@ -3,8 +3,8 @@ import Decimal from 'decimal.js'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
-const TechIcon = ({iconName, iconsBoxWidth, selectedTech, iconIndex, findAndSelectTech})=> {
-    //In order to prevent icons to get trapped with between 0 and 1, we start in a value between 2 and width-2, same for yPosition
+const TechIcon = ({icon, iconsBoxWidth, selectedTech, iconIndex, findAndSelectTech, boxInView})=> {
+    //In order to prevent icons to get trapped between 0 and 1, we start in a value between 2 and width-2, same for yPosition
     const [xPosition, setXPosition] = useState(2 + Math.floor(Math.random() * (iconsBoxWidth-64-4)))
     const [yPosition, setYPosition] = useState(2 + Math.floor(Math.random() * (320-64-4)))
     const [xDirection, setXDirection] = useState(Math.random() >= 0.5 ? 1 : -1)
@@ -15,12 +15,12 @@ const TechIcon = ({iconName, iconsBoxWidth, selectedTech, iconIndex, findAndSele
     const [selectedPosition, setSelectedPosition] = useState(null)
     
     useEffect(() => {
-        if(selectedTech) return
+        if(selectedTech || !boxInView) return
         const timer = setTimeout(()=>{
             changeDirection()
             mooveIcon()
          }, 100)
-    }, [xPosition, yPosition, xDirection, yDirection, selectedTech])
+    }, [xPosition, yPosition, xDirection, yDirection, selectedTech, boxInView])
 
     useEffect(()=> {
         selectedTech && handleSelection()
@@ -59,7 +59,7 @@ const TechIcon = ({iconName, iconsBoxWidth, selectedTech, iconIndex, findAndSele
             whileHover={{ duration: 0.1, scale: 1.4 }}
             onClick={() => findAndSelectTech(iconIndex)}
         >
-            <Image src={`/techIcons/${iconName}.png`} alt={`${iconName}-icon`} width="40" height="40" />
+            <Image src={`/techIcons/${icon.fileName}`} alt={`icon-${icon.fileName}`} width={icon.width} height={icon.height} />
         </motion.div>
     )
 }

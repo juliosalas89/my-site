@@ -1,39 +1,21 @@
 'use client'
+import { urbanist600, urbanist100 } from '@/utils/fonts'
 import TechInfoBanner from "./TechInfoBanner"
 import TechCard from "./TechCard"
 import TechIcon from "./TechIcon"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
+import tech from '../../appData/technologies.json'
+import techIcons from '../../appData/techIcons.json'
+import AnimatedAppearance from '../general/AnimatedAppearance'
+import { useInView } from 'framer-motion'
 
 const Technologies = () => {
     const [iconsBoxWidth, setIconsBoxWidth] = useState(null)
     const [selectedTechIndex, setSelectedTechIndex] = useState(null)
-    const [icons] = useState(['CSS3', 'express', 'git', 'html5', 'js', 'mySQL', 'next', 'node', 'react', 'sql', 'vue'])
-    const [technologies] = useState([
-        {
-            label: 'React.js',
-            iconsIndexes: [8, 6]
-        },
-        {
-            label: 'Vue.js',
-            iconsIndexes: [10]
-        },
-        {
-            label: 'JavaScript',
-            iconsIndexes: [4, 3, 0]
-        },
-        {
-            label: 'MySQL - SQLanguage',
-            iconsIndexes: [5, 9]
-        },
-        {
-            label: 'Node.js - Express',
-            iconsIndexes: [7, 1]
-        },
-        {
-            label: 'Git',
-            iconsIndexes: [2]
-        }
-    ])
+    const [icons] = useState(techIcons.list)
+    const [technologies] = useState(tech.list)
+    const iconsBox = useRef(null)
+    const boxInView = useInView(iconsBox)
     
     useEffect(()=> {
         const dimensions = document.getElementById('icons-container').getBoundingClientRect()
@@ -48,8 +30,18 @@ const Technologies = () => {
     
     return (
         <main>
-            <p className="title-mid"><span className="blue-span">languages</span> and</p>
-            <p className="title-mid tech-title"><span className="green-span">tools</span> I'm used to</p>
+            <AnimatedAppearance children={
+                <>
+                    <div className={urbanist600.className}>
+                        <p className="title-mid">Languages</p>
+                        <p className="title-mid"><span className="green-text">and</span> tools</p>
+                    </div>
+                    <div className={`subtitle-div ${urbanist100.className}`}>
+                        <p>Theese are the technologies that I know and I worked with so far</p>
+                        <p>I'm continuously learning though, so they will be more in the future</p>
+                    </div>
+                </>
+            }/>
             <div className="technologies-container">
                 <div className="cards-container-div">
                     <div className="cards-flex-box">
@@ -64,14 +56,21 @@ const Technologies = () => {
                         ))}
                     </div>
                 </div>
-                <div id="icons-container" className="icons-box-div">
-                    { selectedTechIndex !== null ? <TechInfoBanner iconsBoxWidth={iconsBoxWidth} unselectTech={() => setSelectedTechIndex(null)}/> : null}
-                    {!iconsBoxWidth ? null : icons.map((iconName, index) => (
+                <div id="icons-container" className="icons-box-div" ref={iconsBox}>
+                    { selectedTechIndex === null ? null : (
+                        <TechInfoBanner 
+                            iconsBoxWidth={iconsBoxWidth} 
+                            unselectTech={() => setSelectedTechIndex(null)}
+                            selectedTech={technologies[selectedTechIndex] || null}
+                        />
+                    )}
+                    {!iconsBoxWidth ? null : icons.map((icon, index) => (
                         <TechIcon 
+                            boxInView={boxInView}
                             findAndSelectTech={iconIndex => findAndSelectTech(iconIndex)}
                             selectedTech={technologies[selectedTechIndex] || null}
                             iconsBoxWidth={iconsBoxWidth} 
-                            iconName={iconName} 
+                            icon={icon} 
                             iconIndex={index}
                             key={index}
                         />

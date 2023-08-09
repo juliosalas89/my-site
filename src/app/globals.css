@@ -20,13 +20,14 @@ body {
 }
 /* ############### GENERAL #################### */
 .title-mid {
-    font-size: 3rem;
+    font-size: 4rem;
+    line-height: 1.1;
 }
 
-.green-span {
+.green-text {
     color: #45D483;
 }
-.blue-span {
+.blue-text {
     color: #06B7DB;
 }
 
@@ -35,14 +36,18 @@ body {
 }
 
 .indent {
-    margin-left: 7rem;
+    margin-left: 11rem;
 }
 
+.subtitle-div{
+    margin-top: 0.4rem;
+    font-size: 1.5rem;
+}
 
 /* ############### TECHNOLOGIES #################*/
 
 .technologies-container {
-    min-height: 35rem;
+    min-height: 30rem;
     padding: 1rem;
     width: 100%;
     display: flex;
@@ -150,6 +155,7 @@ body {
 }
 
 .education-cards-container {
+    padding-top: 3rem;
     position: relative;
     height: 500px;
 }
@@ -160,23 +166,33 @@ body {
 
 .education-card-main-left {
     width: 100%;
-    padding: 1rem 5rem 1rem 1rem;
+    padding: 1rem;
+    padding-right: 30%;
 }
 
 .education-card-main-right {
     width: 100%;
-    padding: 1rem 1rem 1rem 5rem;
+    padding: 1rem;
+    padding-left: 30%;
 }
 
 .education-card-div {
+    position: relative;
     width: 100%;
     padding: 2rem;
-    border: 1px solid rgb(255,255,255, 0.09);
     border-radius: 0.5rem;
-    background: rgb(255,255,255, 0.04);
 }
+
 .education-card-div:hover {
-    background: radial-gradient(circle at calc(var(--cursor-x) * 100%) calc(var(--cursor-y) * 100%),  #052814bb 0%, transparent 70%);
+    background: radial-gradient(circle at calc(var(--cursor-x) * 100%) calc(var(--cursor-y) * 100%),  #052814bb 0%, transparent 80%);
+}
+
+.offset-catch-div {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
 }
 
 .education-card-header {

@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion'
+import { urbanist300 } from '@/utils/fonts'
 
 const TechCard = ({technology, setSelectedTechIndex, selectedTechIndex, techIndex}) => {
     const isSelected = selectedTechIndex === techIndex
     return (
         <main className="tech-card-main">
             <motion.div 
-                className={`tech-card-div ${isSelected ? 'tech-is-selected' : ''}`}
+                className={`tech-card-div ${urbanist300.className} ${isSelected ? 'tech-is-selected' : ''}`}
                 onClick={() => setSelectedTechIndex(!isSelected ? techIndex : null)} 
                 whileTap={{ scale: 0.95 }}   
             >
