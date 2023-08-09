@@ -10,7 +10,7 @@ import AnimatedAppearance from '../general/AnimatedAppearance'
 import { useInView } from 'framer-motion'
 
 const Technologies = () => {
-    const [iconsBoxWidth, setIconsBoxWidth] = useState(null)
+    const [iconsBoxDimensions, setIconsBoxDimensions] = useState(null)
     const [selectedTechIndex, setSelectedTechIndex] = useState(null)
     const [icons] = useState(techIcons.list)
     const [technologies] = useState(tech.list)
@@ -18,8 +18,9 @@ const Technologies = () => {
     const boxInView = useInView(iconsBox)
     
     useEffect(()=> {
+        if(iconsBoxDimensions) return
         const dimensions = document.getElementById('icons-container').getBoundingClientRect()
-        if(dimensions) setIconsBoxWidth(dimensions.width)
+        dimensions && setIconsBoxDimensions(dimensions)
     })
 
     const findAndSelectTech = (iconIndex)=> {
@@ -31,16 +32,16 @@ const Technologies = () => {
     return (
         <main>
             <AnimatedAppearance children={
-                <>
+                <div className='title-main-container'>
                     <div className={urbanist600.className}>
                         <p className="title-mid">Languages</p>
-                        <p className="title-mid"><span className="green-text">and</span> tools</p>
+                        <p className="title-mid"><span className="gradient-text">and</span> tools</p>
                     </div>
                     <div className={`subtitle-div ${urbanist100.className}`}>
                         <p>Theese are the technologies that I know and I worked with so far</p>
                         <p>I'm continuously learning though, so they will be more in the future</p>
                     </div>
-                </>
+                </div>
             }/>
             <div className="technologies-container">
                 <div className="cards-container-div">
@@ -59,17 +60,17 @@ const Technologies = () => {
                 <div id="icons-container" className="icons-box-div" ref={iconsBox}>
                     { selectedTechIndex === null ? null : (
                         <TechInfoBanner 
-                            iconsBoxWidth={iconsBoxWidth} 
+                            iconsBoxDimensions={iconsBoxDimensions} 
                             unselectTech={() => setSelectedTechIndex(null)}
                             selectedTech={technologies[selectedTechIndex] || null}
                         />
                     )}
-                    {!iconsBoxWidth ? null : icons.map((icon, index) => (
+                    {!iconsBoxDimensions ? null : icons.map((icon, index) => (
                         <TechIcon 
                             boxInView={boxInView}
                             findAndSelectTech={iconIndex => findAndSelectTech(iconIndex)}
                             selectedTech={technologies[selectedTechIndex] || null}
-                            iconsBoxWidth={iconsBoxWidth} 
+                            iconsBoxDimensions={iconsBoxDimensions} 
                             icon={icon} 
                             iconIndex={index}
                             key={index}

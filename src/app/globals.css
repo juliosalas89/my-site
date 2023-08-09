@@ -18,7 +18,11 @@ body {
         )
         rgb(var(--background-start-rgb));
 }
-/* ############### GENERAL #################### */
+
+/* ###############         GENERAL         ######################################################################### */
+.title-main-container{
+    padding: 0px;
+}
 .title-mid {
     font-size: 4rem;
     line-height: 1.1;
@@ -29,6 +33,11 @@ body {
 }
 .blue-text {
     color: #06B7DB;
+}
+.gradient-text {
+    background: -webkit-linear-gradient(#45D483, #06B7DB);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .title-right {
@@ -43,24 +52,33 @@ body {
     margin-top: 0.4rem;
     font-size: 1.5rem;
 }
+@media all and (min-width: 756px) and (max-width: 899px){
+    .title-main-container {
+        padding: 0rem 1.5rem;
+    }
+}
+@media all and (max-width: 755px){
+    .title-main-container {
+        padding: 0rem 1.5rem;
+    }
+}
 
-/* ############### TECHNOLOGIES #################*/
+/* ###############       TECHNOLOGIES        #########################################################################*/
 
 .technologies-container {
     min-height: 30rem;
-    padding: 1rem;
+    padding: 2rem 1rem;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: rgb(0, 0, 0);
     background: radial-gradient(circle, #052814bb 0%, rgba(0, 0, 0, 1) 30%);
 }
 
 .icons-box-div {
     position: relative;
-    height: 20rem;
+    min-height: 25rem;
     width: 50%;
     overflow: hidden;
     margin-left: 1rem;
@@ -72,7 +90,7 @@ body {
 
 .cards-container-div {
     width: 50%;
-    height: 20rem;
+    min-height: 20rem;
     display: flex;
     align-items: center;
 }
@@ -88,12 +106,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 0.5rem;
 }
 
 .tech-card-div {
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 0rem 1rem 1rem;
+    font-size: 1.2rem;
     border: 1px solid rgb(255,255,255, 0.09);
     border-radius: 0.5rem;
     background: rgb(255,255,255, 0.04);
@@ -146,6 +165,176 @@ body {
 
 .tech-info-banner-div:hover {
     cursor: pointer;
+}
+
+@media all and (min-width: 1700px){
+    
+}
+/* large devices */
+@media all and (min-width: 1200px) and (max-width: 1699px){
+    
+}
+/* medium devices*/
+@media all and (min-width: 900px) and (max-width: 1199px){
+    .tech-card-main{
+        width: 100%;
+    }
+    .icons-box-div{
+        height: 456px;
+    }
+}
+@media all and (min-width: 756px) and (max-width: 899px){
+    .tech-card-main{
+        width: 100%;
+    }
+    .icons-box-div{
+        height: 456px;
+    }
+}
+@media all and (min-width: 501px) and (max-width: 755px){
+    .technologies-container {
+        flex-direction: column-reverse;
+        background: radial-gradient(circle at 100% 50%, #052814bb 0%, rgba(0, 0, 0, 1) 40%);
+    }
+    .cards-container-div {
+        width: 100%;
+    }
+    .tech-card-main{
+        width: 100%;
+        padding: 0.5rem 0rem;
+    }
+    .tech-card-div {
+        padding: 0.7rem 0rem 0.7rem 0.7rem;
+    }
+    .icons-box-div{
+        margin: 1.5rem;
+        margin-top: 0rem;
+        width: 100%;
+        min-height: 22rem;
+    }
+}
+@media all and (max-width: 500px){
+    .technologies-container {
+        flex-direction: column-reverse;
+        background: radial-gradient(circle at 100% 50%, #052814bb 0%, rgba(0, 0, 0, 1) 40%);
+    }
+    .cards-container-div {
+        width: 100%;
+    }
+    .tech-card-main{
+        width: 100%;
+        padding: 0.3rem 0rem;
+    }
+    .tech-card-div {
+        padding: 0.4rem 0rem 0.4rem 0.4rem;
+    }
+    .icons-box-div{
+        margin-bottom: 0.5rem;
+        width: 100%;
+        min-height: 22rem;
+    }
+}
+
+/* #################     EXPERIENCE        ################################################################################################## */
+
+.experience-main {
+    margin-top: 8rem;
+}
+
+.experience-cards-container {
+    padding-top: 3rem;
+    min-height: 500px;
+}
+
+.experience-column-div {
+    width: 50%;
+}
+
+.experience-card-main-left {
+    width: 100%;
+    padding: 1rem;
+    padding-right: 30%;
+}
+
+.experience-card-main-right {
+    width: 100%;
+    padding: 1rem;
+    padding-left: 30%;
+}
+
+.experience-card-div {
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+@keyframes background-gradient {
+    0% {background: none }
+    10% {background: radial-gradient(circle at calc(var(--cursor-x) * 100%) calc(var(--cursor-y) * 100%),  #052814bb 0%, transparent 8%);}
+    20% {background: radial-gradient(circle at calc(var(--cursor-x) * 100%) calc(var(--cursor-y) * 100%),  #052814bb 0%, transparent 16%);}
+    30% {background: radial-gradient(circle at calc(var(--cursor-x) * 100%) calc(var(--cursor-y) * 100%),  #052814bb 0%, transparent 24%);}
+    40% {background: radial-gradient(circle at calc(var(--cursor-x) * 100%) calc(var(--cursor-y) * 100%),  #052814bb 0%, transparent 32%);}
+    50% {background: radial-gradient(circle at calc(var(--cursor-x) * 100%) calc(var(--cursor-y) * 100%),  #052814bb 0%, transparent 40%);}
+    60% {background: radial-gradient(circle at calc(var(--cursor-x) * 100%) calc(var(--cursor-y) * 100%),  #052814bb 0%, transparent 48%);}
+    70% {background: radial-gradient(circle at calc(var(--cursor-x) * 100%) calc(var(--cursor-y) * 100%),  #052814bb 0%, transparent 56%);}
+    80% {background: radial-gradient(circle at calc(var(--cursor-x) * 100%) calc(var(--cursor-y) * 100%),  #052814bb 0%, transparent 64%);}
+    90% {background: radial-gradient(circle at calc(var(--cursor-x) * 100%) calc(var(--cursor-y) * 100%),  #052814bb 0%, transparent 72%);}
+    100% {background: radial-gradient(circle at calc(var(--cursor-x) * 100%) calc(var(--cursor-y) * 100%),  #052814bb 0%, transparent 80%);}
+}
+
+.experience-card-div:hover {
+    animation-fill-mode: forwards;
+    animation-name: background-gradient;
+    animation-duration: 0.3s;
+}
+
+.offset-catch-div {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    border-radius: 0.5rem;
+}
+
+.experience-card-header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.experience-card-header-details {
+    font-size: 1.3rem;
+    margin-left: 2rem;
+}
+
+.experience-card-body {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+@media all and (min-width: 1700px){
+    
+}
+@media all and (min-width: 1200px) and (max-width: 1699px){
+    
+}
+@media all and (min-width: 900px) and (max-width: 1199px){
+    
+}
+@media all and (min-width: 756px) and (max-width: 899px){
+    
+}
+@media all and (max-width: 755px){
+    .experience-card-main-left {
+        padding: 1rem;
+    }
+    
+    .experience-card-main-right {
+        padding: 1rem;
+    }
+    
 }
 
 /* ################# EDUCATION ################# */
@@ -209,28 +398,34 @@ body {
     margin-top: 1.5rem;
 }
 
+
 /* ################## MEDIA RESPONSIVE STYLES ################ */
 
 /* x-large devices */
-@media all and (min-width: 1051px){
+@media all and (min-width: 1700px){
     body {
-       padding: 0rem 10rem 0rem 10rem;
+       padding: 0rem 15rem 0rem 15rem;
     }
 }
 /* large devices */
-@media all and (min-width: 992px) and (max-width: 1050px){
+@media all and (min-width: 1200px) and (max-width: 1699px){
     body {
        padding: 0rem 6rem 0rem 6rem;
     }
 }
 /* medium devices*/
-@media all and (min-width: 768px) and (max-width: 991px){
+@media all and (min-width: 900px) and (max-width: 1199px){
     body {
         padding: 0rem 2rem 0rem 2rem;
     }
 }
 /* mobile devices */
-@media all and (max-width: 767px) {
+@media all and (min-width: 756px) and (max-width: 899px) {
+    body {
+        padding: 0rem;
+    }
+}
+@media all and (max-width: 755px){
     body {
         padding: 0rem;
     }

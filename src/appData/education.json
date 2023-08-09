@@ -1,0 +1,18 @@
+{
+    "list": [
+        {
+            "institution": "Rolling Code School",
+            "dates": "Nov 2021 - Feb 2022",
+            "time": "4 months",
+            "title": "Full Stack Developer",
+            "description": "In this course I learned the basis of: JavaScript - HTML5 - CSS3 - MongoDB - Express - ReactJS - NodeJS"
+        },
+        {
+            "institution": "National University of Tucumán, Argentina.",
+            "dates": "Jan 2009 - Dec 2016",
+            "time": "8 years",
+            "title": "Mechanicla Engineer",
+            "description": "I completed a degree of 52 subjects in Mechanical Engineering in the national University of Tucumán."
+        }
+    ]
+}
