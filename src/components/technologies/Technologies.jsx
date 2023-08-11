@@ -31,15 +31,15 @@ const Technologies = () => {
     
     return (
         <main>
-            <AnimatedAppearance children={
+            <AnimatedAppearance id="technologies-title" children={
                 <div className='title-main-container'>
                     <div className={urbanist600.className}>
                         <p className="title-mid">Languages</p>
                         <p className="title-mid"><span className="gradient-text">and</span> tools</p>
                     </div>
                     <div className={`subtitle-div ${urbanist100.className}`}>
-                        <p>Theese are the technologies that I know and I worked with so far</p>
-                        <p>I'm continuously learning though, so they will be more in the future</p>
+                        <p>Theese are the technologies I know and I work with so far.</p>
+                        <p>I'm continuously learning though, so I hope there will be more in the future</p>
                     </div>
                 </div>
             }/>
