@@ -8,7 +8,7 @@ const Education = () => {
     const [educationCards] = useState(['tonio', 'pepo'])
     return (
         <main className="education-main">
-            <AnimatedAppearance children={
+            <AnimatedAppearance id="education-title" children={
                 <div className="title-main-container">
                     <div className={`title-right ${urbanist600.className}`}>
                         <p className="title-mid">Education</p>
@@ -21,7 +21,6 @@ const Education = () => {
                 </div>
             }/>
             <div className="education-cards-container">
-                {educationCards.map((card, index) => <EducationCard key={index} index={index} name={card}/>)}    
             </div>
         </main>
     )

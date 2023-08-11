@@ -8,7 +8,7 @@ const TechCard = ({technology, setSelectedTechIndex, selectedTechIndex, techInde
             <motion.div 
                 className={`tech-card-div ${urbanist100.className} ${isSelected ? 'tech-is-selected' : ''}`}
                 onClick={() => setSelectedTechIndex(!isSelected ? techIndex : null)} 
-                whileTap={{ scale: 0.95 }}   
+                whileTap={{ scale: 0.92 }}   
             >
                 <p>{technology.label}</p>
             </motion.div>

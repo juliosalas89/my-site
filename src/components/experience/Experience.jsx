@@ -10,7 +10,7 @@ const Experience = () => {
     const [experiences] = useState(exp.list)
     return (
         <main className="experience-main">
-            <AnimatedAppearance children={
+            <AnimatedAppearance id="experience-title" children={
                 <div className="title-main-container">
                     <div className={`title-right ${urbanist600.className}`}>
                         <p className="title-mid"><span className="green-text">Exp</span>erience</p>

@@ -1,3 +1,6 @@
+/* This styles sheet is organized by Folders, that means each folder contained in "/src/components" has its own section in this sheet, 
+delimitated by a comment with the name of the folder (e.g. EDUCATION), media queries are at the end of each section*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,6 +20,46 @@ body {
         rgb(var(--background-end-rgb))
         )
         rgb(var(--background-start-rgb));
+}
+.page-general-styles {
+    padding-top: 5rem;
+    background-color: rgb(0, 0, 0);
+    background: radial-gradient(circle at 100% 7%, #06B7DB -40%, rgba(0, 0, 0, 1) 12%);
+}
+
+@media all and (min-width: 1700px){
+    .page-container {
+        padding-right: 15rem;
+        padding-left: 15rem;
+    }
+}
+@media all and (min-width: 1200px) and (max-width: 1699px){
+    .page-container {
+        padding-right: 6rem;
+        padding-left: 6rem;
+    }
+}
+@media all and (min-width: 900px) and (max-width: 1199px){
+    .page-container {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+}
+@media all and (min-width: 756px) and (max-width: 899px) {
+    .page-container {
+        padding-top: 5rem;
+        padding-right: 0rem;
+        padding-left: 0rem;
+    }
+}
+@media all and (max-width: 755px){
+    .page-general-styles {
+        padding-top: 3rem;
+    }
+    .page-container {
+        padding-right: 0rem;
+        padding-left: 0rem;
+    }
 }
 
 /* ###############         GENERAL         ######################################################################### */
@@ -52,14 +95,141 @@ body {
     margin-top: 0.4rem;
     font-size: 1.5rem;
 }
+::-webkit-scrollbar {
+    background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-track {
+  background: #333333;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
 @media all and (min-width: 756px) and (max-width: 899px){
     .title-main-container {
         padding: 0rem 1.5rem;
     }
 }
-@media all and (max-width: 755px){
+@media all and (min-width: 350px) and (max-width: 755px){
     .title-main-container {
         padding: 0rem 1.5rem;
+    }
+    .title-mid {
+        font-size: 3.5rem;
+    }
+    .subtitle-div{
+        font-size: 1.3rem;
+    }
+}
+@media all and (max-width: 349px){
+    .title-main-container {
+        padding: 0rem 1.5rem;
+    }
+    .title-mid {
+        font-size: 2rem;
+    }
+    .subtitle-div{
+        font-size: 1.1rem;
+    }
+}
+
+/* ###############         NAVBAR         ######################################################################### */
+.navbar-main {
+    z-index: 3;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+}
+.navbar-title-div{
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+}
+.navbar-options-div {
+    display: flex;
+    align-items: center;
+}
+.navbar-link {
+    font-size: 1.1rem;
+    margin-right: 1rem;
+}
+.navbar-link:hover {
+    cursor: pointer;
+}
+.navbar-button {
+    margin-left: 0.5rem;
+}
+.navbar-button:hover{
+    cursor: pointer;
+}
+@media all and (min-width: 756px) and (max-width: 899px){
+    .navbar-main {
+        padding: 0rem 1.5rem;    
+    }
+    .title-main-container {
+        padding: 0rem 1.5rem;
+    }
+}
+@media all and (min-width: 350px) and (max-width: 755px){
+    .navbar-main {
+        padding: 0rem 1.5rem;    
+    }
+    .navbar-title-div{
+        font-size: 2rem;
+    }
+    
+}
+@media all and (max-width: 349px){
+    .navbar-main {
+        padding: 0.5rem 0.5rem;    
+    }
+    .navbar-title-div{
+        font-size: 1.5rem;
+    }
+}
+@media all and (max-width: 450px){
+    .navbar-link {
+        display: none;
+    }
+}
+@media all and (max-width: 530px){
+    .navbar-link {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+    }
+}
+
+/* ###############         HEADER         ######################################################################### */
+.header-main {
+    padding-top: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    height: 100vh;
+}
+.header-introduction {
+    font-size: 1.5rem;
+}
+.contact-data-div {
+    padding: 0.5rem 0rem;
+    width: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media all and (max-width: 349px){
+    .contact-data-div {
+        display: none;
     }
 }
 
@@ -115,7 +285,7 @@ body {
     font-size: 1.2rem;
     border: 1px solid rgb(255,255,255, 0.09);
     border-radius: 0.5rem;
-    background: rgb(255,255,255, 0.04);
+    background: rgb(255,255,255, 0.01);
 }
 .tech-card-div:hover {
     cursor: pointer;
@@ -154,6 +324,7 @@ body {
 }
 
 .tech-info-banner-div {
+    font-size: 1.3rem;
     border-radius: 50%;
     top: 0;
     left: 0;
@@ -194,7 +365,10 @@ body {
 @media all and (min-width: 501px) and (max-width: 755px){
     .technologies-container {
         flex-direction: column-reverse;
-        background: radial-gradient(circle at 100% 50%, #052814bb 0%, rgba(0, 0, 0, 1) 40%);
+        background: radial-gradient(circle at 100% 50%, #052814bb 0%, rgba(0, 0, 0, 1) 50%);
+    }
+    .tech-info-banner-div {
+        font-size: 1.2rem;
     }
     .cards-container-div {
         width: 100%;
@@ -217,6 +391,9 @@ body {
     .technologies-container {
         flex-direction: column-reverse;
         background: radial-gradient(circle at 100% 50%, #052814bb 0%, rgba(0, 0, 0, 1) 40%);
+    }
+    .tech-info-banner-div {
+        font-size: 1rem;
     }
     .cards-container-div {
         width: 100%;
@@ -305,12 +482,12 @@ body {
 }
 
 .experience-card-header-details {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     margin-left: 2rem;
 }
 
 .experience-card-body {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-top: 1.5rem;
 }
 
@@ -324,9 +501,49 @@ body {
     
 }
 @media all and (min-width: 756px) and (max-width: 899px){
+    .experience-card-header-details {
+        font-size: 1.5rem;
+    }
+    
+    .experience-card-body {
+        font-size: 1.2rem;
+    }
+}
+@media all and (min-width: 550px) and (max-width: 755px){
+    .experience-card-main-left {
+        padding: 1rem;
+    }
+    
+    .experience-card-main-right {
+        padding: 1rem;
+    }
+    .experience-card-div {
+        padding: 1rem;
+    }
     
 }
-@media all and (max-width: 755px){
+@media all and (max-width: 549px){
+    .experience-card-header {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .experience-card-logo-div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .experience-card-header-details {
+        font-size: 1.3rem;
+        margin-left: 0rem;
+        margin-top: 1rem;
+    }
+    .experience-card-div {
+        padding: 1rem 0rem;
+    }
+    .experience-card-body {
+        font-size: 1.1rem;
+    }
     .experience-card-main-left {
         padding: 1rem;
     }
@@ -400,33 +617,3 @@ body {
 
 
 /* ################## MEDIA RESPONSIVE STYLES ################ */
-
-/* x-large devices */
-@media all and (min-width: 1700px){
-    body {
-       padding: 0rem 15rem 0rem 15rem;
-    }
-}
-/* large devices */
-@media all and (min-width: 1200px) and (max-width: 1699px){
-    body {
-       padding: 0rem 6rem 0rem 6rem;
-    }
-}
-/* medium devices*/
-@media all and (min-width: 900px) and (max-width: 1199px){
-    body {
-        padding: 0rem 2rem 0rem 2rem;
-    }
-}
-/* mobile devices */
-@media all and (min-width: 756px) and (max-width: 899px) {
-    body {
-        padding: 0rem;
-    }
-}
-@media all and (max-width: 755px){
-    body {
-        padding: 0rem;
-    }
-}

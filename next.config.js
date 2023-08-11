@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    experimental: {
-        appDir: true,
-    },
     compiler: {
-      styledComponents: true,
-    },
+        // see https://styled-components.com/docs/tooling#babel-plugin for more info on the options.
+        styledComponents: {
+            displayName: true,
+            ssr: true,
+        }
+    }
 }
 
 module.exports = nextConfig

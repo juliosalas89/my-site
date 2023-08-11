@@ -34,10 +34,12 @@ const ExperienceCard = ({experience, index}) => {
         <main className={`experience-card-main-${index % 2 === 0 ? 'left' : 'right'}`}>
             <div className="experience-card-div">
                 <div className="experience-card-header">
-                    <Image src={`/experienceIcons/${experience.icon.fileName}`} alt={`icon-${experience.icon.fileName}`} width={experience.icon.width} height={experience.icon.height} />
+                    <div className="experience-card-logo-div">
+                        <Image src={`/experienceIcons/${experience.icon.fileName}`} alt={`icon-${experience.icon.fileName}`} width={experience.icon.width} height={experience.icon.height} />
+                    </div>
                     <div className={`experience-card-header-details ${urbanist300.className}`}>
-                        <p>{`${experience.company} - ${experience._time.present ? calculateTime(experience._time.time) : experience._time.time}`}</p>
-                        <p>{experience.dates}</p>
+                        <p>{experience.title}</p>
+                        <p>{`${experience.dates} (${experience._time.present ? calculateTime(experience._time.time) : experience._time.time})`}</p>
                     </div>
                 </div>
                 <div className="experience-card-body">
