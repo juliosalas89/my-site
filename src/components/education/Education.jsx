@@ -8,7 +8,7 @@ const Education = forwardRef(function Education (_,ref) {
     const [educationCards] = useState(['tonio', 'pepo'])
     return (
         <main ref={ref} className="education-main">
-            <AnimatedAppearance  children={
+            <AnimatedAppearance>
                 <div className="title-main-container">
                     <div className={`title-right ${urbanist600.className}`}>
                         <p className="title-mid">Education</p>
@@ -19,7 +19,7 @@ const Education = forwardRef(function Education (_,ref) {
                         <p>I'm have a degree in Mechanical Engineering and I know some JavaScript Stacks.</p>
                     </div>
                 </div>
-            }/>
+            </AnimatedAppearance>
             <div className="education-cards-container">
             </div>
         </main>
