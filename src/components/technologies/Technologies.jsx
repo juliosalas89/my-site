@@ -12,8 +12,8 @@ import { useInView } from 'framer-motion'
 const Technologies = forwardRef(function Technologies (_, ref) {
     const iconsBoxDimensions = useRef(null)
     const [selectedTechIndex, setSelectedTechIndex] = useState(null)
-    const [icons] = useState(techIcons.list)
-    const [technologies] = useState(tech.list)
+    const icons = useRef(techIcons.list)
+    const technologies = useRef(tech.list)
     const iconsBox = useRef(null)
     const boxInView = useInView(iconsBox)
     
@@ -24,8 +24,8 @@ const Technologies = forwardRef(function Technologies (_, ref) {
 
     const findAndSelectTech = (iconIndex)=> {
         if(iconIndex === null) setSelectedTechIndex(null)
-        const techToSelect = technologies.find(tech => tech.iconsIndexes.includes(iconIndex))
-        techToSelect && setSelectedTechIndex(technologies.indexOf(techToSelect))
+        const techToSelect = technologies.current.find(tech => tech.iconsIndexes.includes(iconIndex))
+        techToSelect && setSelectedTechIndex(technologies.current.indexOf(techToSelect))
     }
     
     return (
@@ -46,7 +46,7 @@ const Technologies = forwardRef(function Technologies (_, ref) {
                 <div className="technologies-container">
                     <div className="cards-container-div">
                         <div className="cards-flex-box">
-                            {technologies.map((technology, index) => (
+                            {technologies.current.map((technology, index) => (
                                 <TechCard 
                                     techIndex={index}
                                     technology={technology} 
@@ -62,14 +62,14 @@ const Technologies = forwardRef(function Technologies (_, ref) {
                             <TechInfoBanner 
                                 iconsBoxDimensions={iconsBoxDimensions.current} 
                                 unselectTech={() => setSelectedTechIndex(null)}
-                                selectedTech={technologies[selectedTechIndex] || null}
+                                selectedTech={technologies.current[selectedTechIndex] || null}
                             />
                         )}
-                        {!iconsBoxDimensions.current ? null : icons.map((icon, index) => (
+                        {!iconsBoxDimensions.current ? null : icons.current.map((icon, index) => (
                             <TechIcon 
                                 boxInView={boxInView}
                                 findAndSelectTech={iconIndex => findAndSelectTech(iconIndex)}
-                                selectedTech={technologies[selectedTechIndex] || null}
+                                selectedTech={technologies.current[selectedTechIndex] || null}
                                 iconsBoxDimensions={iconsBoxDimensions.current} 
                                 icon={icon} 
                                 iconIndex={index}
