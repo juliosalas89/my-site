@@ -10,7 +10,7 @@ import AnimatedAppearance from '../general/AnimatedAppearance'
 import { useInView } from 'framer-motion'
 
 const Technologies = forwardRef(function Technologies (_, ref) {
-    const [iconsBoxDimensions, setIconsBoxDimensions] = useState(null)
+    const iconsBoxDimensions = useRef(null)
     const [selectedTechIndex, setSelectedTechIndex] = useState(null)
     const [icons] = useState(techIcons.list)
     const [technologies] = useState(tech.list)
@@ -18,10 +18,9 @@ const Technologies = forwardRef(function Technologies (_, ref) {
     const boxInView = useInView(iconsBox)
     
     useEffect(()=> {
-        if(iconsBoxDimensions) return
         const dimensions = document.getElementById('icons-container').getBoundingClientRect()
-        dimensions && setIconsBoxDimensions(dimensions)
-    }, [])
+        dimensions && (iconsBoxDimensions.current = dimensions)
+    })
 
     const findAndSelectTech = (iconIndex)=> {
         if(iconIndex === null) setSelectedTechIndex(null)
@@ -61,17 +60,17 @@ const Technologies = forwardRef(function Technologies (_, ref) {
                     <div id="icons-container" className="icons-box-div" ref={iconsBox}>
                         { selectedTechIndex === null ? null : (
                             <TechInfoBanner 
-                                iconsBoxDimensions={iconsBoxDimensions} 
+                                iconsBoxDimensions={iconsBoxDimensions.current} 
                                 unselectTech={() => setSelectedTechIndex(null)}
                                 selectedTech={technologies[selectedTechIndex] || null}
                             />
                         )}
-                        {!iconsBoxDimensions ? null : icons.map((icon, index) => (
+                        {!iconsBoxDimensions.current ? null : icons.map((icon, index) => (
                             <TechIcon 
                                 boxInView={boxInView}
                                 findAndSelectTech={iconIndex => findAndSelectTech(iconIndex)}
                                 selectedTech={technologies[selectedTechIndex] || null}
-                                iconsBoxDimensions={iconsBoxDimensions} 
+                                iconsBoxDimensions={iconsBoxDimensions.current} 
                                 icon={icon} 
                                 iconIndex={index}
                                 key={index}

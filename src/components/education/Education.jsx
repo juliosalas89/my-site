@@ -16,7 +16,7 @@ const Education = forwardRef(function Education (_,ref) {
                     </div>
                     <div className={`subtitle-div title-right ${urbanist100.className}`}>
                         <p>I know reading a lot of cards just to know how much i know is annoying, so to be short:</p>
-                        <p>I'm have a degree in Mechanical Engineering and I know some JavaScript Stacks.</p>
+                        <p>I&#039;m have a degree in Mechanical Engineering and I know some JavaScript Stacks.</p>
                     </div>
                 </div>
             </AnimatedAppearance>
