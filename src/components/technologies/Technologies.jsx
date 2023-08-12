@@ -21,7 +21,7 @@ const Technologies = forwardRef(function Technologies (_, ref) {
         if(iconsBoxDimensions) return
         const dimensions = document.getElementById('icons-container').getBoundingClientRect()
         dimensions && setIconsBoxDimensions(dimensions)
-    })
+    }, [])
 
     const findAndSelectTech = (iconIndex)=> {
         if(iconIndex === null) setSelectedTechIndex(null)
@@ -32,7 +32,7 @@ const Technologies = forwardRef(function Technologies (_, ref) {
     return (
         <main ref={ref}>
             <div className='technologies-padding-div'>
-                <AnimatedAppearance children={
+                <AnimatedAppearance>
                     <div className='title-main-container'>
                         <div className={urbanist600.className}>
                             <p className="title-mid">Technologies</p>
@@ -40,10 +40,10 @@ const Technologies = forwardRef(function Technologies (_, ref) {
                         </div>
                         <div className={`subtitle-div ${urbanist100.className}`}>
                             <p>Theese are the technologies I know and I work with so far.</p>
-                            <p>I'm continuously learning though, so I hope there will be more in the future</p>
+                            <p>I&#039;m continuously learning though, so I hope there will be more in the future</p>
                         </div>
                     </div>
-                }/>
+                </AnimatedAppearance>
                 <div className="technologies-container">
                     <div className="cards-container-div">
                         <div className="cards-flex-box">
