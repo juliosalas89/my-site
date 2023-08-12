@@ -64,7 +64,7 @@ body {
 
 /* ###############         GENERAL         ######################################################################### */
 .title-main-container{
-    padding: 0px;
+    padding-top: 4rem;
 }
 .title-mid {
     font-size: 4rem;
@@ -94,6 +94,32 @@ body {
 .subtitle-div{
     margin-top: 0.4rem;
     font-size: 1.5rem;
+}
+.bar-buttons-div {
+    display: flex;
+}
+.bar-button {
+    margin-left: 0.5rem;
+}
+.bar-button:hover{
+    cursor: pointer;
+}
+
+.copy-button:hover {
+    cursor: pointer;
+}
+.tooltip-background {
+    color: white;
+    background-color: #333333;
+}
+
+.clipboard-button-div {
+    width: 1.3rem;
+    position: relative;
+}
+.clipboard-button-icon {
+    position: absolute;
+    top: 0px;
 }
 ::-webkit-scrollbar {
     background: rgb(0, 0, 0);
@@ -151,10 +177,13 @@ body {
     background-color: rgb(0, 0, 0, 0.6);
     backdrop-filter: blur(15px);
 }
-.navbar-title-div{
+.navbar-title-div {
     display: flex;
     align-items: center;
     font-size: 3rem;
+}
+.navbar-title-div:hover {
+    cursor: pointer;
 }
 .navbar-options-div {
     display: flex;
@@ -167,12 +196,7 @@ body {
 .navbar-link:hover {
     cursor: pointer;
 }
-.navbar-button {
-    margin-left: 0.5rem;
-}
-.navbar-button:hover{
-    cursor: pointer;
-}
+
 @media all and (min-width: 756px) and (max-width: 899px){
     .navbar-main {
         padding: 0rem 1.5rem;    
@@ -215,10 +239,42 @@ body {
     padding-top: 3rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    height: 100vh;
+    min-height: 90vh;
+    min-height: clac(100vh - 5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
-.header-introduction {
-    font-size: 1.5rem;
+.header-introduction-section {
+    font-size: 1.7rem;
+}
+.header-subtitle {
+    font-size: 2.5rem;
+}
+.header-languages-item {
+    display: flex;
+    align-items: center;
+}
+.flag-div {
+    display: flex;
+    align-items: end;
+    height: 1.4rem;
+    width: 2.5rem;
+    padding: 0rem 0.3rem;
+}
+.content-div {
+    width: calc(100% - 2.5rem);
+}
+.header-languages-label {
+    font-size: 1.4rem;
+}
+.header-languages-content {
+    font-size: 1.4rem;
+}
+.header-contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 .contact-data-div {
     padding: 0.5rem 0rem;
@@ -227,9 +283,59 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+.header-personal-data-div {
+    width: 19rem;
+    display: flex;
+    justify-content: end;
+}
+.header-personal-data-p {
+    font-size: 1.4rem;
+    margin-right: 0.8rem;
+}
+@media all and (min-width: 350px) and (max-width: 755px){
+    .header-main {
+        padding-top: 1rem;
+    }
+    .header-introduction-section {
+        font-size: 1.5rem;
+    }
+    .header-subtitle {
+        font-size: 1.7rem;
+    }
+    .header-languages-label {
+        font-size: 1.2rem;
+    }
+    .header-languages-content {
+        font-size: 1.1rem;
+    }
+    .header-personal-data-p {
+        font-size: 1.2rem;
+    }
+}
 @media all and (max-width: 349px){
-    .contact-data-div {
-        display: none;
+    .header-main {
+        padding-top: 0.5rem;
+    }
+    .header-introduction-section {
+        font-size: 1.2rem;
+    }
+    .header-language-section {
+        padding-top: 0.5rem;
+    }
+    .header-contact-section {
+        padding-top: 0.5rem;
+    }
+    .header-subtitle {
+        font-size: 1.5rem;
+    }
+    .header-languages-label {
+        font-size: 1.1rem;
+    }
+    .header-languages-content {
+        font-size: 1rem;
+    }
+    .header-personal-data-p {
+        font-size: 1rem;
     }
 }
 
@@ -244,6 +350,9 @@ body {
     justify-content: center;
     align-items: center;
     background: radial-gradient(circle, #052814bb 0%, rgba(0, 0, 0, 1) 30%);
+}
+.technologies-padding-div {
+    padding-top: 3rem;
 }
 
 .icons-box-div {
@@ -415,7 +524,10 @@ body {
 /* #################     EXPERIENCE        ################################################################################################## */
 
 .experience-main {
-    margin-top: 8rem;
+    padding-top: 4rem;
+}
+.experience-padding-div {
+    padding-top: 3rem;
 }
 
 .experience-cards-container {
@@ -557,7 +669,7 @@ body {
 /* ################# EDUCATION ################# */
 
 .education-main {
-    margin-top: 8rem;
+    margin-top: 4rem;
 }
 
 .education-cards-container {
@@ -616,4 +728,63 @@ body {
 }
 
 
-/* ################## MEDIA RESPONSIVE STYLES ################ */
+/* ################## FOOTER ################ */
+.footer-main {
+    background-color: rgb(0,0,0);
+    background: radial-gradient(ellipse at 0% 130%, #06B7DB -400%, rgba(0, 0, 0, 1) 50%);
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    height: 9rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.personal-data-div {
+    padding: 0.3rem 0;
+    width: 13.5rem;
+    display: flex;
+    justify-content: end;
+}
+.footer-subsection-div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.personal-data-p {
+    margin-right: 0.5rem;
+}
+
+@media all and (min-width: 756px) and (max-width: 899px){
+    .footer-main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+@media all and (max-width: 755px){
+    .footer-main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+ 
+    .footer-main {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .personal-data-div {
+        justify-content: center;
+    }
+    .footer-subsection-div {
+        width: 100%;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+}

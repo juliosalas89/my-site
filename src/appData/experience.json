@@ -9,7 +9,7 @@
             },
             "dates": "Aug 2022 - Present",
             "_time": { "present":  true, "time": "August 01, 2022"},
-            "description": "This was my first professional experience in a software company. I work here as a full stack developer mainly in a big project they've been developing for four years now. Here I do everything needed to get things done, this includes:\nchanges in the mySQL DB (modify and create tables, modify and create Views, etc)\nchanghes in the backend (modify and create endpoints, very complex controllers that process a lot of information, etc)\nchanges in the client (they dont have UX designers so this includes designing and developing the hole new functionallitys, and even sometimes meetings with the client)"
+            "description": "This was my first professional experience in a software company. I work here as a full stack developer mainly in a big project they've been developing for four years now. Here I do everything needed to get things done, this includes:\nchanges in the mySQL DB (modify and create tables, modify and create Views, etc)\nchanghes in the backend (modify and create endpoints, very complex controllers that process a lot of information, etc)\nchanges in the client (they dont have UX designers so this includes designing and developing the whole new functionallitys, and even sometimes meetings with the client)"
         },
         {
             "title": "Freelance Full Stack Developer",
@@ -20,7 +20,7 @@
             },
             "dates": "Mar 2022 - Jul 2022",
             "_time": { "present":  false, "time": "5 months"},
-            "description": "During this period I waroked in a three programers team in an interesting project for a client. Client was a shoes retailer with three fisical stores in different locations, so he wanted to manage stocks and sales with one system, integrating all the information. I worked mainly in React developing the client-side. I left that project to take my possition in Solaris Development."
+            "description": "During this period I waroked in a three programers team in an interesting project for a client. Client was a shoes retailer with three fisical stores in different locations, so he wanted to manage stocks and sales with one system, integrating all the information. I worked developing the client-side in React. I left that project to take my possition in Solaris Development."
         },
         {
             "title": "Student in Rolling Code School",

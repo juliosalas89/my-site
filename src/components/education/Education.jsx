@@ -1,14 +1,14 @@
 'use client'
 import { urbanist600, urbanist100 } from "@/utils/fonts"
-import { useState } from "react"
+import { forwardRef, useState } from "react"
 import EducationCard from "./EducationCard"
 import AnimatedAppearance from "../general/AnimatedAppearance"
 
-const Education = () => {
+const Education = forwardRef((_,ref) => {
     const [educationCards] = useState(['tonio', 'pepo'])
     return (
-        <main className="education-main">
-            <AnimatedAppearance id="education-title" children={
+        <main ref={ref} className="education-main">
+            <AnimatedAppearance  children={
                 <div className="title-main-container">
                     <div className={`title-right ${urbanist600.className}`}>
                         <p className="title-mid">Education</p>
@@ -24,6 +24,6 @@ const Education = () => {
             </div>
         </main>
     )
-}
+})
 
 export default Education
