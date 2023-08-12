@@ -3,7 +3,7 @@ import Decimal from 'decimal.js'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
-const TechIcon = ({icon, iconsBoxDimensions, selectedTech, iconIndex, findAndSelectTech, boxInView})=> {
+export default function TechIcon ({icon, iconsBoxDimensions, selectedTech, iconIndex, findAndSelectTech, boxInView}) {
     //In order to prevent icons to get trapped between 0 and 1, we start in a value between 2 and width-2, same for yPosition
     const [xPosition, setXPosition] = useState(2 + Math.floor(Math.random() * (iconsBoxDimensions.width-64-4)))
     const [yPosition, setYPosition] = useState(2 + Math.floor(Math.random() * (iconsBoxDimensions.height-64-4)))
@@ -63,5 +63,3 @@ const TechIcon = ({icon, iconsBoxDimensions, selectedTech, iconIndex, findAndSel
         </motion.div>
     )
 }
-
-export default TechIcon

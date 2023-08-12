@@ -4,7 +4,7 @@ import { forwardRef } from 'react';
 import { motion, useInView } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 
-const AnimatedAppearance = ({children}) => {
+export default function AnimatedAppearance ({children}) {
     const [animation, setAnimation] = useState({ opacity: 0, scale: 0.5 })
     const element = useRef(null)
     const inView = useInView(element)
@@ -34,5 +34,3 @@ const AnimatedAppearance = ({children}) => {
         </motion.div>
     )
 }
-
-export default AnimatedAppearance

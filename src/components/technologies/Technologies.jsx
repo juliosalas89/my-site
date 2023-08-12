@@ -9,7 +9,7 @@ import techIcons from '../../appData/techIcons.json'
 import AnimatedAppearance from '../general/AnimatedAppearance'
 import { useInView } from 'framer-motion'
 
-const Technologies = forwardRef((_, ref) => {
+const Technologies = forwardRef(function Technologies (_, ref) {
     const [iconsBoxDimensions, setIconsBoxDimensions] = useState(null)
     const [selectedTechIndex, setSelectedTechIndex] = useState(null)
     const [icons] = useState(techIcons.list)

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { urbanist300 } from "@/utils/fonts"
 
-const TechInfoBanner = ({unselectTech, iconsBoxDimensions, selectedTech})=> {
+export default function TechInfoBanner ({unselectTech, iconsBoxDimensions, selectedTech}) {
     return (
         <motion.div
             className="tech-info-banner-div"
@@ -13,5 +13,3 @@ const TechInfoBanner = ({unselectTech, iconsBoxDimensions, selectedTech})=> {
         </motion.div>
     )
 }
-
-export default TechInfoBanner

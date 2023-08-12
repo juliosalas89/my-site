@@ -4,8 +4,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import HomeIcon from '@mui/icons-material/Home';
 
-const BarButtons = () => {
-
+export default function BarButtons () {
     return (
         <main>
             <div className='bar-buttons-div'>
@@ -37,5 +36,3 @@ const BarButtons = () => {
         </main>
     )
 }
-
-export default BarButtons

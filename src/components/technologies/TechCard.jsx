@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { urbanist100 } from '@/utils/fonts'
 
-const TechCard = ({technology, setSelectedTechIndex, selectedTechIndex, techIndex}) => {
+export default function TechCard ({technology, setSelectedTechIndex, selectedTechIndex, techIndex}) {
     const isSelected = selectedTechIndex === techIndex
     return (
         <main className="tech-card-main">
@@ -15,5 +15,3 @@ const TechCard = ({technology, setSelectedTechIndex, selectedTechIndex, techInde
         </main>
     )
 } 
-
-export default TechCard

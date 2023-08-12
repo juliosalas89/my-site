@@ -3,7 +3,7 @@ import { urbanist100, urbanist300 } from "@/utils/fonts"
 import { motion } from 'framer-motion'
 import BarButtons from "../general/BarButtons"
 
-const NavBar = ({techRef, expRef, educRef}) => {
+export default function NavBar ({techRef, expRef, educRef}) {
     
     const handleScroll = sectionRef => {
         const element = sectionRef.current.querySelectorAll('div')
@@ -56,5 +56,3 @@ const NavBar = ({techRef, expRef, educRef}) => {
         </main>
     )
 }
-
-export default NavBar

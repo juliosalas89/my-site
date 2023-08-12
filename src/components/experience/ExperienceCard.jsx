@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import Decimal from "decimal.js";
 import { urbanist100, urbanist300 } from "@/utils/fonts";
 
-const ExperienceCard = ({experience, index}) => {
+export default function ExperienceCard ({experience, index}) {
     
     useEffect(()=> {
         handleCursorMove()
@@ -32,7 +32,7 @@ const ExperienceCard = ({experience, index}) => {
 
     return (
         <main className={`experience-card-main-${index % 2 === 0 ? 'left' : 'right'}`}>
-            <div className="experience-card-div" id={`offset-catch-div-${experience.logo.fileName}${index}`}>
+            <div className="experience-card-div">
                 <section className="experience-card-header">
                     <div className="experience-card-logo-div">
                         <Image src={`/experienceLogos/${experience.logo.fileName}`} alt={`logo-${experience.logo.fileName}`} width={experience.logo.width} height={experience.logo.height} />
@@ -44,18 +44,16 @@ const ExperienceCard = ({experience, index}) => {
                 </section>
                 <section className="experience-card-icons">
                     {experience.techIcons && experience.techIcons.map((icon, index) => (
-                        <div className="experience-card-icon-div">
-                            <Image key={index} src={`/techIcons/${icon.fileName}`} height={icon.height} width={icon.width} />
+                        <div key={index} className="experience-card-icon-div">
+                            <Image src={`/techIcons/${icon.fileName}`} alt={icon.fileName} height={icon.height} width={icon.width} />
                         </div>
                     ))}
                 </section>
                 <section className="experience-card-body">
                     <p className={urbanist100.className}>{experience.description}</p>
                 </section>
-                {/* <div className="offset-catch-div" id={`offset-catch-div-${experience.logo.fileName}${index}`}/> */}
+                <div className="offset-catch-div" id={`offset-catch-div-${experience.logo.fileName}${index}`}/>
             </div>
         </main>        
     )
 }
-
-export default ExperienceCard

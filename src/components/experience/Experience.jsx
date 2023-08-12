@@ -6,7 +6,7 @@ import ExperienceCard from "./ExperienceCard"
 import AnimatedAppearance from "../general/AnimatedAppearance"
 import exp from '../../appData/experience.json'
 
-const Experience = forwardRef((_,ref) => {
+const Experience = forwardRef(function Experience (_,ref) {
     const [experiences] = useState(exp.list)
     return (
         <main ref={ref} className="experience-main">

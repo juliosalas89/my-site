@@ -2,8 +2,7 @@ import BarButtons from "../general/BarButtons"
 import { urbanist100 } from "@/utils/fonts"
 import ClipBoardButton from "../general/ClipboardButton";
 
-const Footer = ()=> {
-
+export default function Footer () {
     return (
         <main className="footer-main page-container">
             <div className={`footer-subsection-div ${urbanist100.className}`}>
@@ -26,5 +25,3 @@ const Footer = ()=> {
         </main>
     )
 }
-
-export default Footer
