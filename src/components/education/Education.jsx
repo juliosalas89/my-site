@@ -4,7 +4,7 @@ import { forwardRef, useState } from "react"
 import EducationCard from "./EducationCard"
 import AnimatedAppearance from "../general/AnimatedAppearance"
 
-const Education = forwardRef((_,ref) => {
+const Education = forwardRef(function Education (_,ref) {
     const [educationCards] = useState(['tonio', 'pepo'])
     return (
         <main ref={ref} className="education-main">

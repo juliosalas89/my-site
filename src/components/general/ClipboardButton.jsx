@@ -7,7 +7,7 @@ import { useState } from "react";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import DoneIcon from '@mui/icons-material/Done';
 
-const ClipBoardButton = ({message = 'Copy to clipboard', payload, placement = 'top', offset = 7}) => {
+export default function ClipBoardButton ({message = 'Copy to clipboard', payload, placement = 'top', offset = 7}) {
     const [tickStyle, setTickStyle] = useState({ opacity: 0, scale: 0.4 })
     const [copyStyle, setCopyStyle] = useState({ opacity: 1, scale: 1 })
 
@@ -63,5 +63,3 @@ const ClipBoardButton = ({message = 'Copy to clipboard', payload, placement = 't
         </Tooltip>
     )
 }
-
-export default ClipBoardButton

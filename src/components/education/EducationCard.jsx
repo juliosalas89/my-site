@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Decimal from "decimal.js";
 
-const EducationCard = ({name, index}) => {
+export default function EducationCard ({name, index}) {
     // const [xOffset, setXOffset] = useState(0.01)
     const cardRef = useRef(null)
 
@@ -53,5 +53,3 @@ const EducationCard = ({name, index}) => {
         </main>        
     )
 }
-
-export default EducationCard

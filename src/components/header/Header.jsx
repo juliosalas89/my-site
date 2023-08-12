@@ -4,7 +4,7 @@ import { urbanist100, urbanist300, urbanist600 } from "@/utils/fonts"
 import ClipBoardButton from "../general/ClipboardButton"
 import Image from "next/image"
 
-const Header = () => {
+export default function Header () {
     
     const tooltipsConfig = {
         radius: "sm",
@@ -62,5 +62,3 @@ const Header = () => {
         </main>
     )
 }
-
-export default Header
