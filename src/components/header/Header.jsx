@@ -19,12 +19,12 @@ const Header = () => {
     
     return (
         <main className="header-main">
-            <section className={`header-introduction-section ${urbanist100.className}`}>
-                <p className={`header-subtitle ${urbanist600.className}`}><span className="green-text">Welcome</span> to my WebSite!</p>
-                <p>I'm a <span className="green-text">Full Stack Developer</span> specializing in <span className="blue-text">Javascript</span> and a Mechanical <span className="green-text">Engineer</span>. Here you can check all the technologies I work with, some of my projects and my work experience.</p>
+            <section className={`header-introduction-section`}>
+                <p className={`header-subtitle ${urbanist300.className}`}><span className="green-text">Welcome</span> to my WebSite!</p>
+                <p className={urbanist100.className}>I'm a <span className="green-text">Full Stack Developer</span> specializing in <span className="blue-text">Javascript</span> and a Mechanical <span className="green-text">Engineer</span>. Here you can check all the technologies I work with, some of my projects and my work experience.</p>
             </section>
             <section className="header-language-section">
-                <p className={`header-subtitle ${urbanist600.className}`}>Languages <span className="green-text">I speak:</span></p>
+                <p className={`header-subtitle ${urbanist300.className}`}>Languages <span className="green-text">I speak:</span></p>
                 <div className="header-languages-item">
                     <div className="flag-div">
                         <Image src="/flags/Spain.png" alt="spain-flag" width="40" height="10" />

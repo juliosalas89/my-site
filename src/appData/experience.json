@@ -2,40 +2,121 @@
     "list": [
         {
             "title": "Jr. Full Stack Developer in Solaris Development, Martico Group",
-            "icon": {
+            "logo": {
                 "fileName": "martico.png",
                 "width": 120,
                 "height": 40
             },
+            "techIcons": [
+                {
+                    "fileName": "vue.png",
+                    "width": 35,
+                    "height": 35
+                }, 
+                {
+                    "fileName": "node.png",
+                    "width": 35,
+                    "height": 35
+                },
+                {
+                    "fileName": "express.png",
+                    "width": 35,
+                    "height": 35
+                },
+                {
+                    "fileName": "mySQL.png",
+                    "width": 35,
+                    "height": 35
+                },
+                {
+                    "fileName": "sql.png",
+                    "width": 25,
+                    "height": 35
+                }
+            ],
             "dates": "Aug 2022 - Present",
             "_time": { "present":  true, "time": "August 01, 2022"},
             "description": "This was my first professional experience in a software company. I work here as a full stack developer mainly in a big project they've been developing for four years now. Here I do everything needed to get things done, this includes:\nchanges in the mySQL DB (modify and create tables, modify and create Views, etc)\nchanghes in the backend (modify and create endpoints, very complex controllers that process a lot of information, etc)\nchanges in the client (they dont have UX designers so this includes designing and developing the whole new functionallitys, and even sometimes meetings with the client)"
         },
         {
             "title": "Freelance Full Stack Developer",
-            "icon": {
+            "logo": {
                 "fileName": "codeFile.png",
                 "width": 40,
                 "height": 40
             },
+            "techIcons": [
+                {
+                    "fileName": "react.png",
+                    "width": 35,
+                    "height": 35
+                },
+                {
+                    "fileName": "js.png",
+                    "width": 29,
+                    "height": 35
+                },
+                {
+                    "fileName": "html5.png",
+                    "width": 42,
+                    "height": 42
+                },
+                {
+                    "fileName": "CSS3.png",
+                    "width": 35,
+                    "height": 35
+                }
+            ],
             "dates": "Mar 2022 - Jul 2022",
             "_time": { "present":  false, "time": "5 months"},
             "description": "During this period I waroked in a three programers team in an interesting project for a client. Client was a shoes retailer with three fisical stores in different locations, so he wanted to manage stocks and sales with one system, integrating all the information. I worked developing the client-side in React. I left that project to take my possition in Solaris Development."
         },
         {
             "title": "Student in Rolling Code School",
-            "icon": {
+            "logo": {
                 "fileName": "snippets.png",
                 "width": 40,
                 "height": 40
             },
+            "techIcons": [
+                {
+                    "fileName": "react.png",
+                    "width": 35,
+                    "height": 35
+                },
+                {
+                    "fileName": "node.png",
+                    "width": 35,
+                    "height": 35
+                },
+                {
+                    "fileName": "express.png",
+                    "width": 35,
+                    "height": 35
+                },
+                {
+                    "fileName": "js.png",
+                    "width": 29,
+                    "height": 35
+                },
+                {
+                    "fileName": "html5.png",
+                    "width": 42,
+                    "height": 42
+                },
+                {
+                    "fileName": "CSS3.png",
+                    "width": 35,
+                    "height": 35
+                }
+            ],
             "dates": "Nov 2021 - Feb 2022",
             "_time": { "present":  false, "time": "4 months"},
             "description": "I took this time to learn the bases to start my new career as a developer. In this course I made my first steps in this world and it fascinated me from the very start."
         },
         {
             "title": "Maintenance Manager Engineer in Siempre Verde S.A.",
-            "icon": {
+            "logo": {
                 "fileName": "gear.png",
                 "width": 40,
                 "height": 40
@@ -46,7 +127,7 @@
         },
         {
             "title": "Engineering Intern in AB InBev, Quilmes Beer Brewing Company",
-            "icon": {
+            "logo": {
                 "fileName": "quilmes.png",
                 "width": 120,
                 "height": 40

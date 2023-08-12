@@ -1,5 +1,14 @@
 /* This styles sheet is organized by Folders, that means each folder contained in "/src/components" has its own section in this sheet, 
-delimitated by a comment with the name of the folder (e.g. EDUCATION), media queries are at the end of each section*/
+delimitated by a comment with the name of the folder media queries are at the end of each section
+Sections are (in this order):
+GENERAL
+NAVBAR
+HEADER
+TECHNOLOGIES
+EXPERIENCE
+EDUCATION
+FOOTER
+*/
 
 @tailwind base;
 @tailwind components;
@@ -592,7 +601,17 @@ body {
     justify-content: left;
     align-items: center;
 }
-
+.experience-card-icons {
+    display: flex;
+    justify-content: left;
+}
+.experience-card-icon-div {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .experience-card-header-details {
     font-size: 1.6rem;
     margin-left: 2rem;
@@ -666,7 +685,7 @@ body {
     
 }
 
-/* ################# EDUCATION ################# */
+/* ################## EDUCATION ################################################################################ */
 
 .education-main {
     margin-top: 4rem;
@@ -728,7 +747,7 @@ body {
 }
 
 
-/* ################## FOOTER ################ */
+/* ####################    FOOTER    ################################################################################## */
 .footer-main {
     background-color: rgb(0,0,0);
     background: radial-gradient(ellipse at 0% 130%, #06B7DB -400%, rgba(0, 0, 0, 1) 50%);
