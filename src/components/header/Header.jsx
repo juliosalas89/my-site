@@ -1,9 +1,8 @@
 'use client'
 
-import { urbanist100 } from "@/utils/fonts"
-import {Snippet} from "@nextui-org/react"
-import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid'
-import EmailIcon from '@mui/icons-material/Email';
+import { urbanist100, urbanist300, urbanist600 } from "@/utils/fonts"
+import ClipBoardButton from "../general/ClipboardButton"
+import Image from "next/image"
 
 const Header = () => {
     
@@ -20,32 +19,46 @@ const Header = () => {
     
     return (
         <main className="header-main">
-            <div className={`header-introduction ${urbanist100.className}`}>
-                <p>Welcome to my WebSite. I'm a <span className="blue-text">Full Stack Developer</span> specialized in Javascript. I'm also a <span className="green-text">Mechanical Engineer</span>. Here you can check all the technologies I work with, some of my projects and my work experience.</p>
-                <p>If you want to contact me send me an email or call me:</p>
-            </div>
-            <div className="contact-data-div">
-                <EmailIcon/>
-                <Snippet 
-                    tooltipProps={tooltipsConfig}
-                    symbol="" 
-                    color="primary" 
-                    className="w-64"
-                >
-                    julio.a.salas89@gamil.com
-                </Snippet>
-            </div>
-            <div className="contact-data-div">
-                <PhoneAndroidIcon/>
-                <Snippet
-                    tooltipProps={tooltipsConfig} 
-                    symbol="" 
-                    color="success" 
-                    className="w-64"
-                >
-                    +34644608843
-                </Snippet>
-            </div>
+            <section className={`header-introduction-section ${urbanist100.className}`}>
+                <p className={`header-subtitle ${urbanist600.className}`}><span className="green-text">Welcome</span> to my WebSite!</p>
+                <p>I'm a <span className="green-text">Full Stack Developer</span> specializing in <span className="blue-text">Javascript</span> and a Mechanical <span className="green-text">Engineer</span>. Here you can check all the technologies I work with, some of my projects and my work experience.</p>
+            </section>
+            <section className="header-language-section">
+                <p className={`header-subtitle ${urbanist600.className}`}>Languages <span className="green-text">I speak:</span></p>
+                <div className="header-languages-item">
+                    <div className="flag-div">
+                        <Image src="/flags/Spain.png" alt="spain-flag" width="40" height="10" />
+                    </div>
+                    <p className="header-languages-content"><span className={urbanist300.className}>Spanish: </span><span className={urbanist100.className}> Native</span></p>
+                </div>
+                <div className="header-languages-item">
+                    <div className="flag-div">
+                        <Image src="/flags/UK.png" alt="spain-flag" width="40" height="10" />
+                    </div>
+                    <p className="header-languages-content"><span className={urbanist300.className}>English: </span><span className={urbanist100.className}> C 1</span></p>
+                </div>
+                <div className="header-languages-item">
+                    <div className="flag-div">
+                        <Image src="/flags/Germany.png" alt="spain-flag" width="40" height="10" />
+                    </div>
+                    <div className="content-div">
+                        <p className="header-languages-content"><span className={urbanist300.className}>German: </span><span className={urbanist100.className}> Not even close, but I'm determinated to learn it and I started studing it a few months ago.</span></p>
+                    </div>
+                </div>
+            </section>
+            <section className={`header-contact-section ${urbanist300.className}`}>
+                <p className={`header-subtitle ${urbanist600.className}`}><span className="blue-text">Contact</span> me:</p>
+                <div>
+                    <div className="header-personal-data-div">
+                        <p className={`header-personal-data-p ${urbanist100.className}`}>julio.a.salas89@gmail.com</p>
+                        <ClipBoardButton payload='julio.a.salas89@gmail.com' placement='right' offset={26}/>
+                    </div>
+                    <div className="header-personal-data-div">
+                        <p className={`header-personal-data-p ${urbanist100.className}`}>+34644608843</p>
+                        <ClipBoardButton payload='+34644608843' placement='right' offset={26}/>
+                    </div>
+                </div>
+            </section>
         </main>
     )
 }

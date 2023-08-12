@@ -1,5 +1,6 @@
 'use client'
 
+import { forwardRef } from 'react';
 import { motion, useInView } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 
@@ -28,7 +29,7 @@ const AnimatedAppearance = ({children}) => {
         <motion.div
             ref={element}
             animate={animation}
-        >
+            >
             {children}
         </motion.div>
     )
