@@ -16,9 +16,9 @@
             "description": "As you can see JavaScript is the base of my programming knowledge, It's difficult to quantify how much I know about this language, but I can say I love it and I feel very confortable with it. I considere myself a profficient person in problems solving and logic reasoning so I really enjoy coding in JavaScript. Of course, I also know HTML and CSS."
         },
         {
-            "label": "MySQL - SQLanguage",
-            "iconsIndexes": [5, 9],
-            "description": "I learned SQL and MySQL in my first job as developer. Some of the projects there don't use an ORM, so we write the queries as strings, this was very convinient for me to put hands on this amazing technology. I've been working with this language for more than a year and keep doing it daily."
+            "label": "SQL - MySQL",
+            "iconsIndexes": [9, 5],
+            "description": "I learned SQLanguage and MySQL in my first job as developer. Some of the projects there don't use an ORM, so we write the queries as strings, this was very convinient for me to put hands on this amazing technology. I've been working with this language for more than a year and keep doing it daily."
         },
         {
             "label": "Node.js - Express",
