@@ -1,12 +1,12 @@
 import BarButtons from "../general/BarButtons"
-import { urbanist300, urbanist100 } from "@/utils/fonts"
+import { urbanist100 } from "@/utils/fonts"
 import ClipBoardButton from "../general/ClipboardButton";
 
 const Footer = ()=> {
 
     return (
         <main className="footer-main page-container">
-            <div className={`footer-subsection-div ${urbanist300.className}`}>
+            <div className={`footer-subsection-div ${urbanist100.className}`}>
                 <div className="personal-data-div">
                     <p className="personal-data-p">julio.a.salas89@gmail.com</p>
                     <ClipBoardButton payload='julio.a.salas89@gmail.com' placement='right' offset={26}/>

@@ -3,7 +3,7 @@
 import NavBar from "@/components/navbar/NavBar"
 import Header from "@/components/header/Header"
 import Technologies from "@/components/technologies/Technologies"
-import Experience from "@/components/experience/experience"
+import Experience from "@/components/experience/Experience"
 import Education from "@/components/education/Education"
 import Footer from "@/components/footer/Footer"
 import { useRef } from "react"
