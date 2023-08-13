@@ -1,55 +1,41 @@
 'use client'
 
+import { motion, useInView } from "framer-motion"
+import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
-import Decimal from "decimal.js";
+import { urbanist100, urbanist300 } from "@/utils/fonts"
 
-export default function EducationCard ({name, index}) {
-    // const [xOffset, setXOffset] = useState(0.01)
-    const cardRef = useRef(null)
+export default function EducationCard ({education, index}) {
+    const [xOfseft, setXOfseft] = useState(index % 2 === 0 ? '-50%' : '50%')
+    const element = useRef(null)
+    const inView = useInView(element)
 
     
-    // useEffect(() => {
-    //     const observer = new IntersectionObserver(onScroll);
-    //     observer.observe(cardRef.current);
-    // }, [cardRef]);
-    
-    // const onScroll = entries => {
-    //     setXOffset(entries[0].isIntersecting ? 1 : 0.01)
-    // }
-    
-    useEffect(()=> {
-        handleCursorMove()
-    })
-    
-    const handleCursorMove = () => {
-        const card = document.getElementById(`offset-catch-div-${name}`)
-        const cardValues = card.getBoundingClientRect()
-        const root = document.documentElement;
-        card.addEventListener('mousemove', event => {
-            root.style.setProperty('--cursor-x', new Decimal(event.offsetX).div(cardValues.width));
-            root.style.setProperty('--cursor-y', new Decimal(event.offsetY).div(cardValues.height));
-        });
-    }
+    useEffect(()=> {    
+        setXOfseft(inView ? 0 : index % 2 === 0 ? '-50%' : '50%')
+    }, [inView])
 
     return (
-        // <motion.div 
-        //     className="education-card-main"
-        //     transition={{ duration: 0.5 }}   
-        // animate={{ y: index * 200 }}
-        // >
-        <main className={`education-card-main-${index % 2 === 0 ? 'left' : 'right'}`}>
+        <motion.div
+            ref={element}
+            animate={{ x: xOfseft }}
+            transition={{duration: 0.3}}
+            className={`education-card-main-${index % 2 === 0 ? 'left' : 'right'}`}
+        >
             <div className="education-card-div">
                 <div className="education-card-header">
-                    <Image src="/educationIcons/unt.png" alt={`-icon`} width="150" height="40" />
-                    <p className="education-card-header-details">holi que onda</p>
+                    <div className="education-card-logo-div">
+                        <Image src={`/educationLogos/${education.logo.fileName}`} alt={education.logo.fileName} width={education.logo.width} height={education.logo.height}/>
+                    </div>
+                    <div className={`education-card-header-details ${urbanist300.className}`}>
+                        <p>{education.institution}</p>
+                        <p>{education.dates}</p>
+                    </div>
                 </div>
-                <div className="education-card-body">
-                    <p>this is what i leaned in this place</p>
+                <div className={`education-card-body ${urbanist100.className}`}>
+                    <p>{education.description}</p>
                 </div>
-                <div className="offset-catch-div" id={`offset-catch-div-${name}`}/>
             </div>
-        </main>        
+        </motion.div>
     )
 }
