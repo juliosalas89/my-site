@@ -3,19 +3,28 @@ import { motion } from 'framer-motion'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import HomeIcon from '@mui/icons-material/Home';
+import { usePathname, useRouter } from 'next/navigation'
+import { useRef } from 'react';
 
-export default function BarButtons () {
+export default function BarButtons ({footer}) {
+    const widnowWidth = useRef(window.visualViewport.width)
+    const pathName = usePathname()
+    const router = useRouter()
+    const scrollToTop = () => window.scrollTo({top: 0, behavior: 'smooth'})
+
     return (
         <main>
             <div className='bar-buttons-div'>
-                <motion.div 
-                    whileTap={{ scale: 0.9 }}
-                    whileHover={{scale: 1.2}}
-                    onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
-                    className="bar-button"
-                >
-                    <HomeIcon fontSize="large"/>
-                </motion.div>
+                {(widnowWidth.current > 649 || footer) && (
+                    <motion.div 
+                        whileTap={{ scale: 0.9 }}
+                        whileHover={{scale: 1.2}}
+                        onClick={() => pathName === '/' ? scrollToTop() : router.push('/')}
+                        className="bar-button"
+                    >
+                        <HomeIcon fontSize="large"/>
+                    </motion.div>
+                )}
                 <motion.div 
                     whileTap={{ scale: 0.9 }}
                     whileHover={{scale: 1.2}}

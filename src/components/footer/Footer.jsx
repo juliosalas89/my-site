@@ -20,7 +20,7 @@ export default function Footer () {
                 developed by Julio Salas
             </div>
             <div className="footer-subsection-div">
-                <BarButtons/>
+                <BarButtons footer={true}/>
             </div>
         </main>
     )
