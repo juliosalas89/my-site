@@ -3,12 +3,16 @@ import { urbanist100, urbanist300 } from "@/utils/fonts"
 import { motion } from 'framer-motion'
 import BarButtons from "../general/BarButtons"
 import { usePathname, useRouter } from 'next/navigation'
-import { useRef } from "react"
+import { useEffect, useState } from "react"
 
 export default function NavBar ({techRef, expRef, educRef}) {
-    const widnowWidth = useRef(window.visualViewport.width)
+    const [widnowWidth, setWindowWidth] = useState(null)
     const pathName = usePathname()
     const router = useRouter()
+
+    useEffect(()=> {
+        setWindowWidth(window.visualViewport.width)
+    })
     
     const handleScroll = sectionRef => {
         const element = sectionRef.current.querySelectorAll('div')
@@ -31,7 +35,7 @@ export default function NavBar ({techRef, expRef, educRef}) {
             </div>
             <div className={`navbar-options-div ${urbanist300.className}`}>
                 {
-                    pathName === '/' && widnowWidth.current > 570 && (
+                    pathName === '/' && widnowWidth > 570 && (
                     <>
                         <motion.div
                             whileHover={{ scale: 1.1 }} 

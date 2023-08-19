@@ -214,7 +214,7 @@ body {
         padding: 0rem 1.5rem;
     }
 }
-@media all and (min-width: 350px) and (max-width: 755px){
+@media all and (min-width: 375px) and (max-width: 755px){
     .navbar-main {
         padding: 0.3rem 1.5rem;    
     }
@@ -223,17 +223,12 @@ body {
     }
     
 }
-@media all and (max-width: 349px){
+@media all and (max-width: 374px){
     .navbar-main {
         padding: 0.5rem 0.5rem;    
     }
     .navbar-title-div{
         font-size: 1.5rem;
-    }
-}
-@media all and (max-width: 450px){
-    .navbar-link {
-        display: none;
     }
 }
 @media all and (max-width: 530px){
@@ -834,21 +829,25 @@ body {
     justify-content: center;
 }
 .project-img-container {
+    display: flex;
+    justify-content: center;
     padding-bottom: 0px;
     position: relative;
     max-width: 300px;
     width: 60%;
 }
 .project-arrows-container {
+    border-radius: 0.7rem;
+    background-color: rgb(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
     z-index: 1;
-    width: 100%;
+    width: 40%;
     position: absolute;
-    bottom: 0px;
+    bottom: 0.5rem;
     display: flex;
     justify-content: space-around;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
-    background: linear-gradient(0deg, rgba(0,0,0,1) 20%, rgba(255,255,255,0) 100%);
 }
 .project-arrow-button:hover {
     cursor: pointer;
@@ -895,6 +894,9 @@ body {
     .project-section-body-content {
         font-size: 1.3rem;
     }
+    .project-arrows-container {
+        width: 60%;
+    }
 }
 @media all and (max-width: 499px){
     .project-section-body {
@@ -912,14 +914,24 @@ body {
         width: 100%;
         padding-top: 0rem;
     }
-    .project-img-container {
-        width: 60%;
-    }
     .project-section-body-subtitle {
         font-size: 1.4rem;
     }
     .project-section-body-content {
         font-size: 1.1rem;
+    }
+    .project-arrows-container {
+        width: 70%;
+    }
+}
+@media all and (min-width: 400px) and (max-width: 499px){
+    .project-img-container {
+        width: 70%;
+    }
+}
+@media all and (max-width: 399px){
+    .project-img-container {
+        width: 80%;
     }
 }
 
@@ -945,6 +957,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.footer-subsection-div-buttons {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .personal-data-p {
     margin-right: 0.5rem;

@@ -2,7 +2,7 @@ import { Image } from "@nextui-org/react";
 import { urbanist300, urbanist100 } from "@/utils/fonts";
 import { motion } from 'framer-motion'
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
@@ -11,14 +11,17 @@ export default function ProjectSection ({project}) {
     const [animation, setAnimation] = useState({ opacity: 1 })
 
     const handleChangeImage = arrow => {
+        const direction = arrow === 'left' ? -1 : 1
         const leftImage = image > 1 ? image-1 :  project.nrOfFiles
         const rightImage = image < project.nrOfFiles ? image+1 :  1
-        setAnimation({ opacity: 0})
+        setAnimation({ opacity: 0, scale: 0.9, x: -80 * direction })
         setTimeout(()=> {
             setImage(arrow === 'left' ? leftImage : rightImage)
-            setAnimation({ opacity: 1})
-        }, 200)
-        
+            setAnimation({ opacity: 0, scale: 0.9, x: 80 * direction })
+        }, 150)
+        setTimeout(()=> {
+            setAnimation({ opacity: 1, scale: 1, x: 0 })
+        }, 300)
     }
 
     return (
@@ -33,9 +36,10 @@ export default function ProjectSection ({project}) {
                         <motion.div
                             initial={{ opacity: 1 }}
                             animate={animation}
-                            transition={{ duration: 0.2 }}
+                            transition={{ duration: 0.15 }}
                         >
                             <Image
+                                isBlurred
                                 className="img-index"
                                 width={'100%'}
                                 alt="converter"
@@ -48,6 +52,7 @@ export default function ProjectSection ({project}) {
                                 whileHover={{scale: 1.2}}
                                 onClick={() => handleChangeImage('left')}
                             >
+                                {/* <Image src="left-arrow.png" width={30}/> */}
                                 <ArrowBackIosNewIcon sx={{ fontSize: 30 }}/>
                             </motion.div>
                             <motion.div className="project-arrow-button"

@@ -1,6 +1,7 @@
 import BarButtons from "../general/BarButtons"
-import { urbanist100 } from "@/utils/fonts"
+import { urbanist100, urbanist300 } from "@/utils/fonts"
 import ClipBoardButton from "../general/ClipboardButton";
+import { motion } from 'framer-motion'
 
 export default function Footer () {
     return (
@@ -19,7 +20,15 @@ export default function Footer () {
             <div className={`footer-subsection-div gradient-text ${urbanist100.className}`}>
                 developed by Julio Salas
             </div>
-            <div className="footer-subsection-div">
+            <div className="footer-subsection-div-buttons">
+                <motion.div
+                    whileHover={{ scale: 1.1 }} 
+                    whileTap={{ scale: 0.9 }}  
+                    className={`navbar-link ${urbanist300.className}`}
+                    onClick={() => pathName !== '/projects' && router.push('/projects') }
+                >
+                    <p>Projects</p>
+                </motion.div>
                 <BarButtons footer={true}/>
             </div>
         </main>
