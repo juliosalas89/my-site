@@ -38,7 +38,7 @@ const Technologies = forwardRef(function Technologies (_, ref) {
                             <p className="title-mid"><span className="gradient-text">and</span> languages</p>
                         </div>
                         <div className={`subtitle-div ${urbanist100.className}`}>
-                            <p>Theese are the technologies I know and I work with so far.</p>
+                            <p>These are the technologies I know and I work with so far.</p>
                             <p>I&#039;m continuously learning though, so I hope there will be more in the future</p>
                         </div>
                     </div>
