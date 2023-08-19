@@ -1,9 +1,12 @@
 import BarButtons from "../general/BarButtons"
 import { urbanist100, urbanist300 } from "@/utils/fonts"
 import ClipBoardButton from "../general/ClipboardButton";
+import { usePathname, useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 
 export default function Footer () {
+    const pathName = usePathname()
+    const router = useRouter()
     return (
         <main className="footer-main page-container">
             <div className={`footer-subsection-div ${urbanist100.className}`}>
