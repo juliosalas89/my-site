@@ -24,14 +24,16 @@ export default function Footer () {
                 developed by Julio Salas
             </div>
             <div className="footer-subsection-div-buttons">
-                <motion.div
-                    whileHover={{ scale: 1.1 }} 
-                    whileTap={{ scale: 0.9 }}  
-                    className={`navbar-link ${urbanist300.className}`}
-                    onClick={() => pathName !== '/projects' && router.push('/projects') }
-                >
-                    <p>Projects</p>
-                </motion.div>
+                {pathName === '/' && 
+                    <motion.div
+                        whileHover={{ scale: 1.1 }} 
+                        whileTap={{ scale: 0.9 }}  
+                        className={`navbar-link ${urbanist300.className}`}
+                        onClick={() => pathName !== '/projects' && router.push('/projects') }
+                    >
+                        <p>Projects</p>
+                    </motion.div>
+                }
                 <BarButtons footer={true}/>
             </div>
         </main>

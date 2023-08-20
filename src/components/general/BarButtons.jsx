@@ -21,7 +21,7 @@ export default function BarButtons ({footer}) {
     return (
         <main>
             <div className='bar-buttons-div'>
-                {(widnowWidth > 649 || footer) && (
+                {(widnowWidth > 649 || footer || pathName === '/projects') && (
                     <motion.div 
                         whileTap={{ scale: 0.9 }}
                         whileHover={{scale: 1.2}}
