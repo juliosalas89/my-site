@@ -1,0 +1,20 @@
+{
+    "list": [
+        {
+            "title": "Units Converter",
+            "technologies": "React Native and Expo",
+            "description": "Mobile App that converts units. Users can choose over different types of units and then they can choose which unit they want to input, on every change in the input results are calculated automatically. Fav units are placed on the top of the list, for a quick reading. For a betehr user experience, favs, last type of unit used, and last unit selected are sotred in the local memory.",
+            "codeURL": "https://github.com/juliosalas89/units-converter",
+            "fileName": "units-converter",
+            "nrOfFiles": 6
+        },
+        {
+            "title": "My Site",
+            "technologies": "React and Next.js",
+            "description": "It is this website you are exploring right now. To test the responsive design please refresh the site in the desired window size, cause some components are rendered depending on it.",
+            "codeURL": "https://github.com/juliosalas89/my-site",
+            "fileName": "my-site",
+            "nrOfFiles": 2
+        }
+    ]
+}
