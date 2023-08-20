@@ -2,7 +2,7 @@ import { Image } from "@nextui-org/react";
 import { urbanist300, urbanist100 } from "@/utils/fonts";
 import { motion } from 'framer-motion'
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
@@ -52,7 +52,6 @@ export default function ProjectSection ({project}) {
                                 whileHover={{scale: 1.2}}
                                 onClick={() => handleChangeImage('left')}
                             >
-                                {/* <Image src="left-arrow.png" width={30}/> */}
                                 <ArrowBackIosNewIcon sx={{ fontSize: 30 }}/>
                             </motion.div>
                             <motion.div className="project-arrow-button"

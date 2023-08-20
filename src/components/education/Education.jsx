@@ -1,4 +1,5 @@
 'use client'
+
 import { urbanist600, urbanist100 } from "@/utils/fonts"
 import { forwardRef, useRef } from "react"
 import EducationCard from "./EducationCard"
