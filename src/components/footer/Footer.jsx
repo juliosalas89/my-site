@@ -18,7 +18,6 @@ export default function Footer () {
                     <p className="personal-data-p">+34644608843</p>
                     <ClipBoardButton payload='+34644608843' placement='right' offset={26}/>
                 </div>
-
             </div>
             <div className={`footer-subsection-div gradient-text ${urbanist100.className}`}>
                 developed by Julio Salas

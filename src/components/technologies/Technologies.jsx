@@ -4,8 +4,8 @@ import TechInfoBanner from "./TechInfoBanner"
 import TechCard from "./TechCard"
 import TechIcon from "./TechIcon"
 import { forwardRef, useEffect, useRef, useState } from "react"
-import tech from '../../appData/technologies.json'
-import techIcons from '../../appData/techIcons.json'
+import tech from '../../appContent/technologies.json'
+import techIcons from '../../appContent/techIcons.json'
 import AnimatedAppearance from '../general/AnimatedAppearance'
 import { useInView } from 'framer-motion'
 
@@ -38,7 +38,7 @@ const Technologies = forwardRef(function Technologies (_, ref) {
                             <p className="title-mid"><span className="gradient-text">and</span> languages</p>
                         </div>
                         <div className={`subtitle-div ${urbanist100.className}`}>
-                            <p>These are the technologies I know and I work with so far.</p>
+                            <p>These are the technologies I know and I work with.</p>
                             <p>I&#039;m continuously learning though, so I hope there will be more in the future</p>
                         </div>
                     </div>

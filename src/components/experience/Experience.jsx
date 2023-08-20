@@ -4,7 +4,7 @@ import { urbanist600, urbanist100 } from "@/utils/fonts"
 import { forwardRef, useState } from "react"
 import ExperienceCard from "./ExperienceCard"
 import AnimatedAppearance from "../general/AnimatedAppearance"
-import exp from '../../appData/experience.json'
+import exp from '../../appContent/experience.json'
 
 const Experience = forwardRef(function Experience (_,ref) {
     const [experiences] = useState(exp.list)
