@@ -13,7 +13,7 @@ export default function PrivacyPolicyEn () {
                     <p><span className="privacy-policy-span">1- Personal Information:</span> The Units Converter JS application does not actively collect or request any personally identifiable information from users, such as names, email addresses, or phone numbers.</p>
                 </li>
                 <li>
-                    <p><span className="privacy-policy-span">2- Advertising:</span> We use advertising services provided by Google AdMob to display ads within our application. Google AdMob may collect the Advertising Identifier (IDFA) from users of the application to deliver personalized or non-personalized ads. For more information on how Google AdMob uses data, please refer to Google's privacy policy.</p>
+                    <p><span className="privacy-policy-span">2- Advertising:</span> We use advertising services provided by Google AdMob to display ads within our application. Google AdMob may collect the Advertising Identifier (IDFA) from users of the application to deliver personalized or non-personalized ads. For more information on how Google AdMob uses data, please refer to Google&#39;s privacy policy.</p>
                 </li>
             </ul>
             <h3 className="privacy-policy-subtitle">Cookies and Similar Technologies</h3>
