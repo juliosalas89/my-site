@@ -5,7 +5,7 @@ export default function PrivacyPolicyEn () {
             <h3 className="privacy-policy-title">Privacy Policy for Units Converter JS</h3>
             <div className="privacy-policy-content">
                 <p>Effective Date: September 1, 2023</p>
-                <p>This Privacy Policy describes how Units Converter JS ("we," "our," or "the App") collects and uses information when users use our mobile application. We respect the privacy of our users and are committed to protecting their personal information. This policy applies to information collected through our application.</p>
+                <p>This Privacy Policy describes how Units Converter JS (&#34;we,&#34; &#34;our,&#34; or &#34;the App&#34;) collects and uses information when users use our mobile application. We respect the privacy of our users and are committed to protecting their personal information. This policy applies to information collected through our application.</p>
             </div>
             <h3 className="privacy-policy-subtitle">Collection and Use of Data</h3>
             <ul className="privacy-policy-content">

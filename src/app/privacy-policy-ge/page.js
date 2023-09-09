@@ -5,7 +5,7 @@ export default function PrivacyPolicyGe () {
             <h3 className="privacy-policy-title">Datenschutzrichtlinie für Converter JS</h3>
             <div className="privacy-policy-content">
                 <p>Gültig ab: September 1, 2023</p>
-                <p>Diese Datenschutzrichtlinie beschreibt, wie Units Converter JS ("wir," "uns" oder "die App") Informationen sammelt und verwendet, wenn Benutzer unsere mobile Anwendung nutzen. Wir respektieren die Privatsphäre unserer Benutzer und sind verpflichtet, ihre persönlichen Informationen zu schützen. Diese Richtlinie gilt für Informationen, die über unsere Anwendung gesammelt werden.</p>
+                <p>Diese Datenschutzrichtlinie beschreibt, wie Units Converter JS (&#34;wir,&#34; &#34;uns&#34; oder &#34;die App&#34;) Informationen sammelt und verwendet, wenn Benutzer unsere mobile Anwendung nutzen. Wir respektieren die Privatsphäre unserer Benutzer und sind verpflichtet, ihre persönlichen Informationen zu schützen. Diese Richtlinie gilt für Informationen, die über unsere Anwendung gesammelt werden.</p>
             </div>
             <h3 className="privacy-policy-subtitle">Datensammlung und -verwendung</h3>
             <ul className="privacy-policy-content">
