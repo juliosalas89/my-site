@@ -1002,3 +1002,34 @@ body {
         height: auto;
     }
 }
+
+/* ####################    PRIVACY POLICY   ################################################################################## */
+
+.privacy-policy-main{
+    padding: 3rem;
+    font-family: unset;
+    height: 100vh;
+    background-color: white;
+    color: black;
+}
+
+.privacy-policy-title {
+    font-size: larger;
+    font-weight: 500;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.privacy-policy-span {
+    font-weight: 500;
+}
+
+.privacy-policy-subtitle {
+    font-size: large;
+    font-weight: 500;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+}
+.privacy-policy-content {
+    padding-left: 2rem;
+}
