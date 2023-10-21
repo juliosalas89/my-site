@@ -2,15 +2,15 @@
 export default function PrivacyPolicyGe () {
     return (
         <main className="privacy-policy-main">
-            <h3 className="privacy-policy-title">Datenschutzrichtlinie für Converter JS</h3>
+            <h3 className="privacy-policy-title">Datenschutzrichtlinie für Multi Units Converter</h3>
             <div className="privacy-policy-content">
                 <p>Gültig ab: September 1, 2023</p>
-                <p>Diese Datenschutzrichtlinie beschreibt, wie Units Converter JS (&#34;wir,&#34; &#34;uns&#34; oder &#34;die App&#34;) Informationen sammelt und verwendet, wenn Benutzer unsere mobile Anwendung nutzen. Wir respektieren die Privatsphäre unserer Benutzer und sind verpflichtet, ihre persönlichen Informationen zu schützen. Diese Richtlinie gilt für Informationen, die über unsere Anwendung gesammelt werden.</p>
+                <p>Diese Datenschutzrichtlinie beschreibt, wie Multi Units Converter (&#34;wir,&#34; &#34;uns&#34; oder &#34;die App&#34;) Informationen sammelt und verwendet, wenn Benutzer unsere mobile Anwendung nutzen. Wir respektieren die Privatsphäre unserer Benutzer und sind verpflichtet, ihre persönlichen Informationen zu schützen. Diese Richtlinie gilt für Informationen, die über unsere Anwendung gesammelt werden.</p>
             </div>
             <h3 className="privacy-policy-subtitle">Datensammlung und -verwendung</h3>
             <ul className="privacy-policy-content">
                 <li>
-                    <p><span className="privacy-policy-span">1- Persönliche Informationen:</span>  Die Anwendung Units Converter JS sammelt oder fordert nicht aktiv personenbezogene Informationen von Benutzern an, wie Namen, E-Mail-Adressen oder Telefonnummern.</p>
+                    <p><span className="privacy-policy-span">1- Persönliche Informationen:</span>  Die Anwendung Multi Units Converter sammelt oder fordert nicht aktiv personenbezogene Informationen von Benutzern an, wie Namen, E-Mail-Adressen oder Telefonnummern.</p>
                 </li>
                 <li>
                     <p><span className="privacy-policy-span">2- Werbung:</span> Wir verwenden Werbedienste, die von Google AdMob bereitgestellt werden, um Anzeigen in unserer Anwendung anzuzeigen. Google AdMob kann die Werbe-ID (Advertising Identifier - IDFA) von Benutzern der Anwendung sammeln, um personalisierte oder nicht personalisierte Anzeigen bereitzustellen. Weitere Informationen zur Verwendung von Daten durch Google AdMob finden Sie in der Datenschutzrichtlinie von Google.</p>
