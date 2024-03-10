@@ -14,7 +14,7 @@ export default function Projects () {
                         <p className="title-mid">My <span className="green-text">Projects:</span></p>
                     </div>
                     <div className={`subtitle-div ${urbanist100.className}`}>
-                        <p>These are some of my projects. A little preview and links to the code repositories.</p>
+                        <p>These are some of my projects, a little preview and links.</p>
                     </div>
                 </div>
             </AnimatedAppearance>

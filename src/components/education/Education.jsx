@@ -18,7 +18,7 @@ const Education = forwardRef(function Education (_,ref) {
                             <p className="title-mid"><span className="gradient-text">and</span> degrees</p>
                         </div>
                         <div className={`subtitle-div title-right ${urbanist100.className}`}>
-                            <p>I got a degree in Mechanical Engineering (I love science in general) and years later I found a passion in Software development.</p>
+                            <p>I got a degree in Mechanical Engineering and years later I found a passion in Software development.</p>
                         </div>
                     </div>
                 </AnimatedAppearance>

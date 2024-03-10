@@ -1,25 +1,23 @@
 {
     "list": [
         {
-            "institution": "Rolling Code School",
-            "dates": "Nov 2021 - Feb 2022",
+            "institution": "Full Stack Developer - Rolling Code School Bootcamp",
+            "dates": "Nov 2020 - Feb 2021",
             "logo": {
                 "fileName": "snippets.png",
                 "width": 50,
                 "height": 50
             },
-            "title": "Full Stack Developer",
-            "description": "In this course I learned the basis of: JavaScript - HTML5 - CSS3 - MongoDB - Express - ReactJS - NodeJS"
+            "description": "In this bootcamp I learned the basis of: JavaScript - HTML5 - CSS3 - MongoDB - Express - ReactJS - NodeJS"
         },
         {
-            "institution": "National University of Tucumán, Argentina.",
-            "dates": "Jan 2009 - Dec 2016",
+            "institution": "Mechanical Engineer - National University of Tucumán, Argentina.",
+            "dates": "Jan 2009 - Dec 2015",
             "logo": {
                 "fileName": "unt.png",
                 "width": 120,
                 "height": 40
             },
-            "title": "Mechanical Engineer",
             "description": "I completed a degree of 52 subjects in Mechanical Engineering in the national University of Tucumán."
         }
     ]

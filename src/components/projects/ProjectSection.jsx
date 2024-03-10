@@ -39,11 +39,10 @@ export default function ProjectSection ({project}) {
                             transition={{ duration: 0.15 }}
                         >
                             <Image
-                                isBlurred
                                 className="img-index"
                                 width={'100%'}
                                 alt="converter"
-                                src={`/projectsImg/${project.fileName}${image}.jpg`}
+                                src={`/projectsImg/${project.fileName}${image}.webp`}
                             />
                         </motion.div>
                         <div className="project-arrows-container">
@@ -74,18 +73,38 @@ export default function ProjectSection ({project}) {
                         <p className={`project-section-body-content ${urbanist100.className}`}>{project.description}</p>
                     </div>
                     <div className="project-section-details-segment">
-                        <p className={`project-section-body-subtitle gradient-text ${urbanist300.className}`}>Code:</p>
+                        <p className={`project-section-body-subtitle gradient-text ${urbanist300.className}`}>Links:</p>
                         <div className="code-link-div">
                             <p className={`project-section-body-content ${urbanist100.className}`}>Check the code here</p> 
                             <motion.div 
                                 whileTap={{ scale: 0.9 }}
-                                whileHover={{scale: 1.2}}
+                                whileHover={{ scale: 1.2 }}
                                 onClick={()=> window.open(project.codeURL)}
                                 className="bar-button"
                             >
                                 <GitHubIcon fontSize="large"/>
                             </motion.div>
                         </div>
+                        {
+                            project.deployedURL ? (
+                                <div>
+                                    <motion.div 
+                                        whileTap={{ scale: 0.9 }}
+                                        whileHover={{ scale: 1.05 }}
+                                        onClick={()=> window.open(project.codeURL)}
+                                        className="play-store-button-div"
+                                    >
+                                        <Image
+                                            className="play-store-button"
+                                            width={'100%'}
+                                            alt="playStoreButton"
+                                            onClick={()=> window.open(project.deployedURL)}
+                                            src={`/projectsImg/play-store-button.png`}
+                                        />
+                                    </motion.div>
+                                </div>
+                            ) : null
+                        }
                     </div>
                 </div>
             </div>

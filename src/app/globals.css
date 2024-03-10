@@ -257,13 +257,14 @@ body {
 }
 .header-languages-item {
     display: flex;
-    align-items: center;
+    align-items: start;
 }
 .flag-div {
     display: flex;
     align-items: end;
     height: 1.4rem;
     width: 2.5rem;
+    margin-top: 0.3rem;
     padding: 0rem 0.3rem;
 }
 .content-div {
@@ -315,6 +316,9 @@ body {
     .header-personal-data-p {
         font-size: 1.2rem;
     }
+    .flag-div {
+        margin-top: 0rem;
+    }
 }
 @media all and (max-width: 349px){
     .header-main {
@@ -340,6 +344,9 @@ body {
     }
     .header-personal-data-p {
         font-size: 1rem;
+    }
+    .flag-div {
+        margin-top: 0rem;
     }
 }
 
@@ -855,7 +862,14 @@ body {
 .img-index{
     z-index: 0;
 }
-
+.play-store-button-div {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+.play-store-button-div:hover {
+    cursor: pointer;
+}
 .project-section-details-div {
     width: 50%;
     padding: 1rem;
@@ -864,6 +878,7 @@ body {
     display: flex;
     height: 1.7rem;
     align-items: center;
+    margin-bottom: 0.5rem;
 }
 @media all and (min-width: 550px) and (max-width: 755px){
     .project-img-container {
