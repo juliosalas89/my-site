@@ -5,6 +5,7 @@ import { forwardRef, useState } from "react"
 import ExperienceCard from "./ExperienceCard"
 import AnimatedAppearance from "../general/AnimatedAppearance"
 import exp from '../../appContent/experience.json'
+import { calcElapsedTime } from "@/utils/timeUtils"
 
 const Experience = forwardRef(function Experience (_,ref) {
     const [experiences] = useState(exp.list)
@@ -17,7 +18,7 @@ const Experience = forwardRef(function Experience (_,ref) {
                             <p className="title-mid"><span className="green-text">Exp</span>erience</p>
                         </div>
                         <div className={`subtitle-div title-right ${urbanist100.className}`}>
-                            <p>My experience as Software Developer and as a Mechanical Engineer</p>
+                            <p>{calcElapsedTime('"March 01, 2021"')} of experience as Software Engineer</p>
                         </div>
                     </div>
                 </AnimatedAppearance>

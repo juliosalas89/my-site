@@ -3,32 +3,32 @@
         {
             "label": "React.js",
             "iconsIndexes": [8, 6],
-            "description": "At the begining I started programming in React vanilla, then my job took me down a different path (Vue). This year I came back to React with React Native and Next.js (I made a Units Converter mobile app, and then I made this site with Next.js.)"
+            "description": "At the beginning I started programming in React, then my job took me down a different path (Vue). However I kept using React in my personal projects (Next and React Native)."
         },
         {
             "label": "Vue.js",
             "iconsIndexes": [10],
-            "description": "I learned Vue when I started my first job as a jr. I've been developing with Vue everyday for more than year. It was the first technologie I learned only by reading the official documentation, this experience opened a whole new world of posibilities to me."
+            "description": "I learned Vue when I started my first job as a jr developer. It was the first technology I learned only by reading the official documentation, this experience opened a whole new world of posibilities to me."
         },
         {
-            "label": "JavaScript",
+            "label": "JavaScript - HTML - CSS",
             "iconsIndexes": [4, 3, 0],
-            "description": "As you can see JavaScript is the base of my programming knowledge, It's difficult to quantify how much I know about this language, but I can say I love it and I feel very confortable with it. I considere myself a profficient person in problems solving and logic reasoning so I really enjoy coding in JavaScript. Of course, I also know HTML and CSS."
+            "description": "As you can see JavaScript is the base of my programming knowledge. It's difficult to quantify how much I know about this language, but I can say I love it and I feel very confortable with it. I considere myself a profficient person in problems solving and logic reasoning so I really enjoy coding in JavaScript. Of course, I also know HTML and CSS."
         },
         {
             "label": "SQL - MySQL",
             "iconsIndexes": [9, 5],
-            "description": "I learned SQLanguage and MySQL in my first job in a software company. Some of the projects there don't use an ORM, so we write the queries as strings, this was very convinient for me to put hands on this amazing technology. I've been working with this language for more than a year and keep doing it daily."
+            "description": "I learned SQLanguage and MySQL in my current job. Some of the projects there don't use an ORM so we write queries as strings, this was very convinient for me to put hands on this amazing technology. I've been working with this language for more than a year and keep doing it daily."
         },
         {
             "label": "Node.js - Express",
             "iconsIndexes": [7, 1],
-            "description": "I've been developing with Node-Express form the very begining of my programing life, most of my knowledge and experience comes from my first job where we use this combination. I work everyday in backend projects developed with this technology."
+            "description": "I've been developing with Node-Express form the very begining of my programing life, most of my knowledge and experience comes from my current job where my everyday responsibilities involve a lot of backend."
         },
         {
             "label": "Git",
             "iconsIndexes": [2],
-            "description": "Git is my version manager in both my work and my personal projects. I also have experience with the software SmartGit."
+            "description": "Git is my version manager in both my my personal projects and job. I also have experience with the software SmartGit."
         }
     ]
 }

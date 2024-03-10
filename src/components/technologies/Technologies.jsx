@@ -25,7 +25,8 @@ const Technologies = forwardRef(function Technologies (_, ref) {
     const findAndSelectTech = (iconIndex)=> {
         if(iconIndex === null) setSelectedTechIndex(null)
         const techToSelect = technologies.current.find(tech => tech.iconsIndexes.includes(iconIndex))
-        techToSelect && setSelectedTechIndex(technologies.current.indexOf(techToSelect))
+        const indexOfTechToSelect = technologies.current.indexOf(techToSelect)
+        return indexOfTechToSelect === selectedTechIndex ? setSelectedTechIndex(null) : setSelectedTechIndex(indexOfTechToSelect)
     }
     
     return (

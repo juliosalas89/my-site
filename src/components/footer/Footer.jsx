@@ -15,7 +15,7 @@ export default function Footer () {
                     <ClipBoardButton payload='julio.a.salas89@gmail.com' placement='right' offset={26}/>
                 </div>
                 <div className="personal-data-div">
-                    <p className="personal-data-p">+34644608843</p>
+                    <p className="personal-data-p">+34 644 608 843</p>
                     <ClipBoardButton payload='+34644608843' placement='right' offset={26}/>
                 </div>
             </div>

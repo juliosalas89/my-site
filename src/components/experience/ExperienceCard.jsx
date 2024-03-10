@@ -4,6 +4,7 @@ import Image from "next/image"
 import { useEffect } from "react";
 import Decimal from "decimal.js";
 import { urbanist100, urbanist300 } from "@/utils/fonts";
+import { calcElapsedTime } from "@/utils/timeUtils";
 
 export default function ExperienceCard ({experience, index}) {
     
@@ -21,15 +22,6 @@ export default function ExperienceCard ({experience, index}) {
         });
     }
 
-    const calculateTime = (dateFrom) => {
-        const elapsedDays = (new Date() - new Date(dateFrom))/(1000 * 60 * 60 * 24)
-        const elapsedYears = Math.floor(elapsedDays/365)
-        const elapsedMonths = Math.floor(elapsedDays/30.4) - elapsedYears * 12
-        const yearsString = !elapsedYears ? '' : elapsedYears === 1 ? elapsedYears + ' year' : elapsedYears + ' years'
-        const monthsString = !elapsedMonths ? '' : elapsedMonths === 1 ? elapsedMonths + ' month' : elapsedMonths + ' months'
-        return yearsString + monthsString
-    }
-
     return (
         <main className={`experience-card-main-${index % 2 === 0 ? 'left' : 'right'}`}>
             <div className="experience-card-div">
@@ -39,7 +31,7 @@ export default function ExperienceCard ({experience, index}) {
                     </div>
                     <div className={`experience-card-header-details ${urbanist300.className}`}>
                         <p>{experience.title}</p>
-                        <p>{`${experience.dates} (${experience._time.present ? calculateTime(experience._time.time) : experience._time.time})`}</p>
+                        <p>{`${experience.dates} (${experience._time.present ? calcElapsedTime(experience._time.time) : experience._time.time})`}</p>
                     </div>
                 </section>
                 <section className="experience-card-icons">

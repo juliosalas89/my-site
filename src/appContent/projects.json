@@ -1,20 +1,24 @@
 {
     "list": [
         {
-            "title": "Units Converter",
+            "title": "Units Converter (Mobile App)",
             "technologies": "React Native and Expo",
-            "description": "Mobile App that converts units. Users can choose over different types of units and then they can choose which unit they want to input, on every change in the input results are calculated automatically. Fav units are placed on the top of the list, for a quick reading. For a betehr user experience, favs, last type of unit used, and last unit selected are sotred in the local memory.",
+            "description": "Mobile App that converts several types of units. It has adds with Google AdMob and it is deployed on Google Play. It uses local memory to store favorites, last type of unit used, and last unit selected. It has different languages and users can choose over several color themes.",
             "codeURL": "https://github.com/juliosalas89/units-converter",
+            "deployedURL": "https://play.google.com/store/apps/details?id=com.julio.salas.unitsconverter",
             "fileName": "units-converter",
-            "nrOfFiles": 6
+            "nrOfFiles": 9,
+            "qr": "units-converterQR.webp"
         },
         {
-            "title": "My Site",
+            "title": "My Site (Web Site)",
             "technologies": "React and Next.js",
             "description": "It is this website you are exploring right now. To test the responsive design please refresh the site in the desired window size, cause some components are rendered depending on it.",
             "codeURL": "https://github.com/juliosalas89/my-site",
+            "deployedURL": false,
             "fileName": "my-site",
-            "nrOfFiles": 2
+            "nrOfFiles": 2,
+            "qr": false
         }
     ]
 }
