@@ -1,34 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# My Site
 
-First, run the development server:
+This is my personal web site.
 
+Take a look here: [`julio-salas.com`](https://julio-salas.com/)
+
+## Some features:
+Technologies section:
+![mooving icons](https://github.com/juliosalas89/my-site/tree/master/public/screenshots/mooving-logos.png?raw=true)
+This section in particular was very fun to develop. 
+Icons move in random directions all at the same speed, when they reach the edges of the rectangle they bounce as balls and continue their paths. 
+It looks very simple but to get this effect I had to apply a complex mix of pitagoras and JavaScript haha. 
+Also they are interactive, so when you click one of them they all move to make space for a detailed description of my experience with that particular technology.
+[`Check the component here`](https://github.com/juliosalas89/my-site/blob/master/src/components/technologies/TechIcon.jsx).
+
+## How to run the development server
+
+First of all install dependencies.
+In the root file execute:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+npm install
 ```
 
+Now you can start development server by executing:
+```bash
+npm run dev
+```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Troubleshooting:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If anything goes wrong during installation or execution, do the following:
+1- Remove node_modules directory.
+2- Remove package-lock.json file if exists.
+3- Install again using these versions: 
+    node v18.16.0 or similar
+    npm v9.8.1
