@@ -6,12 +6,14 @@ This is my personal web site.
 Take a look here: [`julio-salas.com`](https://julio-salas.com/)
 
 ## Some features:
-Technologies section:
-![mooving icons](https://github.com/juliosalas89/my-site/tree/master/public/screenshots/mooving-logos.png?raw=true)
-This section in particular was very fun to develop. 
-Icons move in random directions all at the same speed, when they reach the edges of the rectangle they bounce as balls and continue their paths. 
-It looks very simple but to get this effect I had to apply a complex mix of pitagoras and JavaScript haha. 
-Also they are interactive, so when you click one of them they all move to make space for a detailed description of my experience with that particular technology.
+Technologies section:  
+
+![mooving-logos](https://github.com/juliosalas89/my-site/assets/95373869/929c8052-7c27-4d30-9005-ac6f25fd5e0c)
+
+I had a lot of fun developing this section.  
+Icons move in random directions all at the same speed, when they reach the edges of the rectangle they bounce as balls and continue their paths.  
+It looks very simple but to get this effect I had to apply a complex mix of pitagoras and JavaScript haha.  
+Also they are interactive, so when you click one of them they all move to make space for a detailed description of my experience with that particular technology.  
 [`Check the component here`](https://github.com/juliosalas89/my-site/blob/master/src/components/technologies/TechIcon.jsx).
 
 ## How to run the development server
