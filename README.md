@@ -30,13 +30,15 @@ npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Troubleshooting:
 
-If anything goes wrong during installation or execution, do the following:
-1- Remove node_modules directory.
-2- Remove package-lock.json file if exists.
-3- Install again using these versions: 
-    node v18.16.0 or similar
-    npm v9.8.1
+If anything goes wrong during installation or execution, do the following:  
+
+1- Remove node_modules directory.  
+
+2- Remove package-lock.json file if exists.  
+
+3- Install again using these versions:   
+    node v18.16.0 or similar  
+    npm v9.8.1  
