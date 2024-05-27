@@ -118,7 +118,7 @@
             },
             "techIcons": [
                 {
-                    "fileName": "vue.png",
+                    "fileName": "react.png",
                     "width": 35,
                     "height": 35
                 }, 
@@ -143,9 +143,9 @@
                     "height": 35
                 }
             ],
-            "dates": "Mar 2021 - Feb 2022",
-            "_time": { "present":  false, "time": "1 year"},
-            "description": "This was my first professional experience in software, contributing to the code of a new project that was not deployed yet, based on Vue, Node, Express, MySQL. Company main acitivity is agricultural services and the software was designed to recover information about the different labors of the company."
+            "dates": "Apr 2020 - Feb 2022",
+            "_time": { "present":  false, "time": "1 year 11 months"},
+            "description": "This was my first professional experience in software, contributing to the code of a project based on React.js, Node.js, Express, MySQL. Company main acitivity is agricultural services and the software was designed to recover information about the different labors of the company."
         },
         {
             "title": "Maintenance Manager Engineer in Siempre Verde S.A.",
@@ -154,7 +154,7 @@
                 "width": 40,
                 "height": 40
             },
-            "dates": "Jun 2015 - Oct 2020",
+            "dates": "Jun 2014 - Oct 2019",
             "_time": { "present":  false, "time": "5 years 5 months"},
             "description": "I had diferent positions and responsabilities in this company trhow these years. As the details are not relevant for my new ocupation (Software Devloper) I can sum up this experience saying that was incredibly enriching, with sacriifice, mistakes, achievements, and big resposibilities that involved considerable ammounts of money and resources of the company. Here I learned a lot about team working and team leading. (If you want to see more details about these years check out my LinkedIn profile)."
         },
@@ -165,7 +165,7 @@
                 "width": 120,
                 "height": 40
             },
-            "dates": "Feb 2015 - Jun 2015",
+            "dates": "Feb 2014 - Jun 2014",
             "_time": { "present":  false, "time": "5 months"},
             "description": "It was my first professional experience as an Engineer, I was close to finishing my engineering studies and this was my internship."
         }

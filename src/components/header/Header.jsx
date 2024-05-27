@@ -22,7 +22,7 @@ export default function Header () {
         <main className="header-main">
             <section className={`header-introduction-section`}>
                 <p className={`header-subtitle ${urbanist300.className}`}><span className="green-text">Welcome</span> to my WebSite!</p>
-                <p className={urbanist100.className}>I&#039;m a <span className="green-text">Full Stack Engineer</span> specializing in <span className="blue-text">JavaScript</span> with {calcElapsedTime('"March 01, 2021"')} of experience in software development. I also have a degree in Mechanical <span className="green-text">Engineering</span> and I have more than 5 years of experience as an <span className="green-text">Engineer</span>. Currently located in Spain, Valencia.</p>
+                <p className={urbanist100.className}>I&#039;m a <span className="green-text">Full Stack Engineer</span> specializing in <span className="blue-text">JavaScript</span> with {calcElapsedTime('"April 01, 2020"')} of experience in software development. I also have a degree in Mechanical <span className="green-text">Engineering</span> and I have more than 5 years of experience as an <span className="green-text">Engineer</span>. Currently located in Spain, Valencia.</p>
             </section>
             <section className="header-language-section">
                 <p className={`header-subtitle ${urbanist300.className}`}>Languages <span className="green-text">I speak:</span></p>

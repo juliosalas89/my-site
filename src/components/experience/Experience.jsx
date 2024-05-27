@@ -18,7 +18,7 @@ const Experience = forwardRef(function Experience (_,ref) {
                             <p className="title-mid"><span className="green-text">Exp</span>erience</p>
                         </div>
                         <div className={`subtitle-div title-right ${urbanist100.className}`}>
-                            <p>{calcElapsedTime('"March 01, 2021"')} of experience as Software Engineer</p>
+                            <p>{calcElapsedTime('"Apr 01, 2020"')} of experience as Software Engineer</p>
                         </div>
                     </div>
                 </AnimatedAppearance>
