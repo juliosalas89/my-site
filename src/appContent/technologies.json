@@ -8,7 +8,7 @@
         {
             "label": "Vue.js",
             "iconsIndexes": [10],
-            "description": "I learned Vue when I started my first job as a jr developer. It was the first technology I learned only by reading the official documentation, this experience opened a whole new world of posibilities to me."
+            "description": "I've used Vue every day for the last 2 years and I feel very comfortable with it. I have experience in Vue2 and Vue3."
         },
         {
             "label": "JavaScript - HTML - CSS",
@@ -18,7 +18,7 @@
         {
             "label": "SQL - MySQL",
             "iconsIndexes": [9, 5],
-            "description": "I learned SQLanguage and MySQL in my current job. Some of the projects there don't use an ORM so we write queries as strings, this was very convinient for me to put hands on this amazing technology. I've been working with this language for more than a year and keep doing it daily."
+            "description": "I learned SQLanguage and MySQL in my first job. But I got very proficient in my current job, Some of the projects there don't use an ORM so we write SQL queries as strings, this gave me the chance to put hands on this amazing technology. I've been working with this language for almost two years and keep doing it in a daily basis."
         },
         {
             "label": "Node.js - Express",
