@@ -20,7 +20,7 @@ const Technologies = forwardRef(function Technologies (_, ref) {
     useEffect(()=> {
         const dimensions = document.getElementById('icons-container').getBoundingClientRect()
         dimensions && (iconsBoxDimensions.current = dimensions)
-    })
+    },[])
 
     const findAndSelectTech = (iconIndex)=> {
         if(iconIndex === null) setSelectedTechIndex(null)

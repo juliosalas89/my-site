@@ -10,7 +10,7 @@ export default function ExperienceCard ({experience, index}) {
     
     useEffect(()=> {
         handleCursorMove()
-    })
+    },[])
     
     const handleCursorMove = () => {
         const card = document.getElementById(`offset-catch-div-${experience.logo.fileName}${index}`)

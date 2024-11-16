@@ -14,7 +14,7 @@ export default function BarButtons ({footer}) {
     useEffect(()=> {
         const width = window.visualViewport.width
         setWidnowWidth(width)
-    })
+    }, [])
 
     const scrollToTop = () => window.scrollTo({top: 0, behavior: 'smooth'})
 
