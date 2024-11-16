@@ -1,7 +1,7 @@
 {
     "list": [
         {
-            "title": "Tech Lead in Solaris Development, Martico Group",
+            "title": "Sr. Full Stack developer in Solaris Development, Martico Group",
             "logo": {
                 "fileName": "martico.png",
                 "width": 120,
@@ -36,10 +36,10 @@
             ],
             "dates": "Aug 2023 - Present",
             "_time": { "present":  true, "time": "August 01, 2023"},
-            "description": "Tech Leader of a project based on Vue, Node, Express and MySQL. My responsibilities includes leading the development team, meetings with the client, take part on the decisions about the future of the project, reviewing code of less experienced developers, writing code and deployment."
+            "description": "Sr developer working mainly in a project based on Vue, Node, Express and MySQL. My responsibilities includes leading the development team, meetings with the client, take part on the decisions about the future of the project, reviewing code of less experienced developers, writing code and deployment."
         },
         {
-            "title": "Full Stack Engineer in Solaris Development, Martico Group",
+            "title": "Full Stack developer in Solaris Development, Martico Group",
             "logo": {
                 "fileName": "martico.png",
                 "width": 120,

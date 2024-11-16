@@ -12,7 +12,7 @@ export default function NavBar ({techRef, expRef, educRef}) {
 
     useEffect(()=> {
         setWindowWidth(window.visualViewport.width)
-    })
+    },[])
     
     const handleScroll = sectionRef => {
         const element = sectionRef.current.querySelectorAll('div')
